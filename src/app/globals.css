@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #f8f4ee;
+  --surface: #fffdf8;
+  --shell: #f0e7db;
+  --mist: #e2d4c5;
+  --ink: #1f2a37;
+  --pine: #1f4a4f;
+  --teal: #2d6c73;
+  --clay: #c58a5a;
+  --sage: #6c7976;
+  --soft-text: #4b5656;
+}
+
+@theme inline {
+  --color-background: var(--canvas);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: radial-gradient(circle at top, #fffefb 0%, #f8f4ee 45%, #f1e7dc 100%);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-geist-sans), 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--ink);
+}
+
+p {
+  color: var(--soft-text);
+}
+
+a {
+  color: inherit;
+  transition: color 200ms ease, opacity 200ms ease;
+}
+
+a:hover {
+  color: inherit;
+  opacity: 0.85;
+}
+
+::selection {
+  background: var(--clay);
+  color: var(--surface);
+}
