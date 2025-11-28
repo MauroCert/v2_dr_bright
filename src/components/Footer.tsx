@@ -24,87 +24,80 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mt-24 bg-[var(--pine)] text-[var(--surface)]">
-      <div className="mx-auto max-w-6xl px-4 py-16">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr,0.9fr,0.9fr]">
-          <div className="space-y-6">
-            <p className="text-sm uppercase tracking-[0.35em] text-[var(--shell)]/90">Cherry Creek South Dental</p>
-            <h3 className="text-3xl font-semibold leading-snug">Family-owned dentistry with concierge-level time.</h3>
-            <p className="text-[var(--shell)]">
-              Longer hygiene visits, advanced technology, and a plant-filled atrium keep appointments calm for every age.
-            </p>
-            <div className="space-y-4 text-sm">
+    <footer className="mt-24 border-t border-[var(--shell)] bg-[var(--surface)] text-[var(--pine)]">
+      <div className="mx-auto max-w-6xl px-4 py-16 space-y-12">
+        <div className="flex flex-col gap-6 rounded-3xl bg-white p-8 shadow-sm md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-xs uppercase tracking-[0.5em] text-[var(--sage)]">Cherry Creek South Dental</p>
+            <h3 className="mt-3 text-3xl font-semibold">Ready for a calm dental visit?</h3>
+            <p className="mt-2 text-sm text-[var(--soft-text)]">Text, call, or plan a visit online—whatever feels easiest.</p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <a href="tel:(303) 377-7744" className="rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white">
+              Call (303) 377-7744
+            </a>
+            <a
+              href="sms:(720) 864-1333"
+              className="rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)]"
+            >
+              Text (720) 864-1333
+            </a>
+          </div>
+        </div>
+
+        <div className="grid gap-10 md:grid-cols-3">
+          <div className="space-y-4">
+            <h4 className="text-sm uppercase tracking-[0.4em] text-[var(--sage)]">Visit us</h4>
+            <p className="text-2xl font-semibold">5055 E Kentucky Ave, Denver</p>
+            <p className="text-sm text-[var(--soft-text)]">Atrium suite near Cherry Creek Trail with free parking.</p>
+            <div className="space-y-2 text-sm">
               <a
                 href="https://maps.google.com/?q=5055+E+Kentucky+Ave,+Denver,+CO+80246"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 text-[var(--surface)]/90 hover:text-white"
+                className="flex items-center gap-2 text-[var(--pine)] hover:text-[var(--clay)]"
               >
-                <MapPin className="mt-1 h-5 w-5 text-[var(--clay)]" />
-                5055 E Kentucky Ave, Denver, CO 80246
+                <MapPin className="h-4 w-4 text-[var(--clay)]" />
+                Get Directions
               </a>
-              <a href="tel:(303) 377-7744" className="flex items-center gap-3 text-[var(--surface)]/90 hover:text-white">
-                <Phone className="h-5 w-5 text-[var(--clay)]" />
-                    (303) 377-7744
-                  </a>
-              <a href="sms:(720) 864-1333" className="flex items-center gap-3 text-[var(--surface)]/90 hover:text-white">
-                <MessageCircle className="h-5 w-5 text-[var(--clay)]" />
-                    (720) 864-1333
-                  </a>
-              </div>
-            </div>
-
-            <div>
-            <h4 className="text-lg font-semibold text-[var(--shell)]">Office Hours</h4>
-            <div className="mt-4 space-y-3 text-sm">
-                {hours.map((schedule) => (
-                <div
-                  key={schedule.day}
-                  className="flex items-center justify-between border-b border-white/10 pb-2 last:border-b-0"
-                >
-                  <span className="font-semibold text-white">{schedule.day}</span>
-                  <span className="text-[var(--shell)]">{schedule.hours}</span>
-                  </div>
-                ))}
-              </div>
-            <div className="mt-8 rounded-2xl bg-white/5 p-5">
-              <p className="text-xs uppercase tracking-[0.3em] text-[var(--shell)]/80">Emergency Care</p>
-              <p className="mt-3 text-sm text-[var(--shell)]">Call us for after-hours emergencies to connect with a team member.</p>
+              <a href="tel:(303) 377-7744" className="flex items-center gap-2 hover:text-[var(--clay)]">
+                <Phone className="h-4 w-4 text-[var(--clay)]" />
+                (303) 377-7744
+              </a>
+              <a href="sms:(720) 864-1333" className="flex items-center gap-2 hover:text-[var(--clay)]">
+                <MessageCircle className="h-4 w-4 text-[var(--clay)]" />
+                (720) 864-1333
+              </a>
             </div>
           </div>
 
-          <div>
-            <h4 className="text-lg font-semibold text-[var(--shell)]">Quick Links</h4>
-            <div className="mt-4 grid grid-cols-2 gap-2 text-sm">
+          <div className="space-y-4">
+            <h4 className="text-sm uppercase tracking-[0.4em] text-[var(--sage)]">Office hours</h4>
+            <div className="space-y-3 text-sm text-[var(--soft-text)]">
+              {hours.map((schedule) => (
+                <div key={schedule.day} className="flex items-center justify-between border-b border-[var(--shell)] pb-2 last:border-none last:pb-0">
+                  <span className="font-semibold text-[var(--pine)]">{schedule.day}</span>
+                  <span>{schedule.hours}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="text-sm uppercase tracking-[0.4em] text-[var(--sage)]">Around the site</h4>
+            <div className="grid grid-cols-2 gap-2 text-sm">
               {quickLinks.map((link) => (
-                <Link key={link.label} href={link.href} className="text-[var(--shell)] transition hover:text-white">
+                <Link key={link.label} href={link.href} className="text-[var(--pine)] hover:text-[var(--clay)]">
                   {link.label}
                 </Link>
               ))}
             </div>
-            <div className="mt-8 rounded-2xl bg-white/5 p-5">
-              <p className="text-xs uppercase tracking-[0.3em] text-[var(--shell)]/80">Visit us</p>
-              <p className="mt-3 text-sm">Atrium suites near Cherry Creek Trail with free parking on site.</p>
-            <a
-              href="https://maps.app.goo.gl/Ye2gTCTUwE17Wm8G8"
-              target="_blank"
-              rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center text-sm font-semibold text-[var(--clay)] hover:text-white"
-            >
-                View map →
-            </a>
-          </div>
-          </div>
-        </div>
-
-        <div className="mt-12 border-t border-white/10 pt-8">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-white/20 p-2 text-white transition hover:border-white hover:text-[var(--clay)]"
+                className="rounded-full border border-[var(--shell)] p-2 text-[var(--pine)] transition hover:border-[var(--clay)] hover:text-[var(--clay)]"
               >
                 <Facebook className="h-4 w-4" />
               </a>
@@ -112,24 +105,26 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-white/20 p-2 text-white transition hover:border-white hover:text-[var(--clay)]"
+                className="rounded-full border border-[var(--shell)] p-2 text-[var(--pine)] transition hover:border-[var(--clay)] hover:text-[var(--clay)]"
               >
                 <Instagram className="h-4 w-4" />
               </a>
             </div>
-            <div className="flex flex-wrap items-center gap-3 text-xs text-[var(--shell)]">
-              <Link href="/privacy-policy" className="hover:text-white">
+          </div>
+        </div>
+
+        <div className="border-t border-[var(--shell)] pt-6 text-xs text-[var(--soft-text)]">
+          <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
+            <p>© {currentYear} Cherry Creek South Dental. All rights reserved.</p>
+            <div className="flex gap-4">
+              <Link href="/privacy-policy" className="hover:text-[var(--clay)]">
                 Privacy Policy
               </Link>
-              <span className="hidden sm:inline">•</span>
-              <Link href="/terms" className="hover:text-white">
+              <Link href="/terms" className="hover:text-[var(--clay)]">
                 Terms
               </Link>
             </div>
           </div>
-          <p className="mt-6 text-center text-xs text-[var(--shell)]">
-            © {currentYear} Cherry Creek South Dental. Built for Cherry Creek families with love and calm energy.
-          </p>
         </div>
       </div>
     </footer>

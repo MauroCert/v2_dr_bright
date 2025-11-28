@@ -124,16 +124,16 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-3xl bg-[var(--pine)] p-8 text-white">
+              <div className="rounded-3xl border border-[var(--shell)] bg-white p-8 text-[var(--pine)] shadow-sm">
                 <h3 className="text-2xl font-semibold">Need directions?</h3>
-                <p className="mt-3 text-white/80">
+                <p className="mt-3 text-[var(--soft-text)]">
                   We’re near Cherry Creek Trail with convenient parking. Tap below for a map.
                 </p>
                 <a
                   href="https://maps.google.com/?q=5055+E+Kentucky+Ave,+Denver,+CO+80246"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center text-sm font-semibold text-[var(--clay)]"
+                  className="mt-4 inline-flex items-center text-sm font-semibold text-[var(--clay)] hover:text-[var(--teal)]"
                 >
                   Open map →
                 </a>
@@ -144,17 +144,23 @@ export default function Contact() {
       </section>
 
       {/* Emergency CTA */}
-      <section className="bg-[var(--pine)] py-16 text-white">
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-4 text-center">
+      <section className="bg-[var(--surface)] py-16">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 rounded-3xl border border-[var(--shell)] bg-white px-4 py-12 text-center text-[var(--pine)] shadow-sm">
           <h2 className="text-3xl font-semibold">Dental emergency?</h2>
-          <p className="text-white/80">
+          <p className="text-[var(--soft-text)]">
             Call or text us immediately. If it’s after hours, follow the voicemail prompts to reach the on-call team or visit the nearest emergency room.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a href="tel:(303) 377-7744" className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--pine)]">
+            <a
+              href="tel:(303) 377-7744"
+              className="rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]"
+            >
               Emergency: (303) 377-7744
             </a>
-            <a href="sms:(720) 864-1333" className="rounded-full border border-white px-6 py-3 text-sm font-semibold text-white">
+            <a
+              href="sms:(720) 864-1333"
+              className="rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)] hover:bg-[var(--pine)] hover:text-white"
+            >
               Text emergency line
             </a>
           </div>

@@ -119,20 +119,23 @@ export default function DrBright() {
               <li>• Emergency visits with calm, judgement-free energy</li>
             </ul>
           </div>
-          <div className="rounded-3xl bg-[var(--pine)] p-8 text-white">
+          <div className="rounded-3xl border border-[var(--shell)] bg-white p-8 text-[var(--pine)] shadow-sm">
             <h3 className="text-3xl font-semibold">Ready to meet Dr. Bright?</h3>
-            <p className="mt-4 text-white/80">
+            <p className="mt-4 text-[var(--soft-text)]">
               Call or text to reserve time with Dr. Bright. We’ll walk you through patient forms, insurance, and making the most of your longer visit.
             </p>
             <div className="mt-6 space-y-3 text-sm">
-              <a href="tel:(303) 377-7744" className="flex items-center gap-3 hover:text-[var(--clay)]">
-                <ArrowRight className="h-4 w-4" /> (303) 377-7744
+              <a href="tel:(303) 377-7744" className="flex items-center gap-3 text-[var(--pine)] hover:text-[var(--clay)]">
+                <ArrowRight className="h-4 w-4 text-[var(--clay)]" /> (303) 377-7744
               </a>
-              <a href="sms:(720) 864-1333" className="flex items-center gap-3 hover:text-[var(--clay)]">
-                <ArrowRight className="h-4 w-4" /> (720) 864-1333
+              <a href="sms:(720) 864-1333" className="flex items-center gap-3 text-[var(--pine)] hover:text-[var(--clay)]">
+                <ArrowRight className="h-4 w-4 text-[var(--clay)]" /> (720) 864-1333
               </a>
             </div>
-            <Link href="/contact" className="mt-8 inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--pine)]">
+            <Link
+              href="/contact"
+              className="mt-8 inline-flex items-center rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]"
+            >
               Contact us
             </Link>
           </div>

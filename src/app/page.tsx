@@ -11,21 +11,6 @@ import {
   Star,
 } from 'lucide-react';
 
-const statCards = [
-  {
-    title: 'Family-Owned & Independent',
-    description: 'Guided by Dr. Bright and a tight-knit team who knows every patient by name.',
-  },
-  {
-    title: '60–90 Minute Cleanings',
-    description: 'Longer hygiene visits for thorough exams, AI x-rays, and judgement-free education.',
-  },
-  {
-    title: 'Technology Forward',
-    description: 'AI diagnostics, CBCT imaging, digital scanners, and Invisalign® expertise.',
-  },
-];
-
 const services = [
   {
     title: 'Cosmetic & Facial Aesthetics',
@@ -121,23 +106,23 @@ const faqs = [
     question: 'What services can I schedule online?',
     answer:
       'Everything from preventive care and Invisalign® consultations to cosmetic visits and emergency dentistry—our team will help you find the right time.',
-  },
-];
+    },
+  ];
 
-const testimonials = [
-  {
-    name: 'Sarah M.',
+  const testimonials = [
+    {
+      name: 'Sarah M.',
     quote: '“The longer appointments felt luxurious. I finally understand my treatment plan and never felt rushed.”',
-  },
-  {
-    name: 'Mike R.',
+    },
+    {
+      name: 'Mike R.',
     quote: '“Family-owned practice with modern tech. AI x-rays plus a calm atrium made my visit stress-free.”',
-  },
-  {
-    name: 'Jennifer L.',
+    },
+    {
+      name: 'Jennifer L.',
     quote: '“They walk you through every option and the atmosphere is spa-like. I send all of my friends here.”',
-  },
-];
+    },
+  ];
 
 export default function Home() {
   return (
@@ -147,61 +132,18 @@ export default function Home() {
         <div className="absolute inset-0">
           <Image src="/hero.avif" alt="Cherry Creek South Dental hero" fill className="object-cover" priority />
         </div>
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-4 py-24 text-white lg:flex-row lg:items-center">
-          <div className="flex-1 space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/70">Cherry Creek South Dental</p>
-            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
-              Cherry Creek warmth, concierge-level dentistry, and technology that feels effortless.
-            </h1>
-            <p className="text-lg text-white/80">
-              Dr. Bright’s family-owned practice blends longer hygiene visits, calming atrium vibes, and AI-enhanced diagnostics so
-              every patient feels seen, heard, and relaxed.
+        <div className="absolute inset-0 bg-black/75" />
+        <div className="relative mx-auto flex max-w-4xl flex-col items-center justify-center px-4 py-32 text-center text-white">
+          <p className="text-xs uppercase tracking-[0.5em] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.65)]">
+              Cherry Creek South Dental
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--clay)] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-black/20 transition hover:bg-[var(--teal)]"
-              >
-                Request an Appointment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <a
-                href="tel:(303) 377-7744"
-                className="inline-flex items-center justify-center rounded-full border border-white/60 px-8 py-3 text-base font-semibold text-white transition hover:bg-white/10"
-              >
-                Call (303) 377-7744
-              </a>
+          <h1
+            className="mt-6 text-4xl font-semibold leading-tight text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.7)] sm:text-5xl"
+            style={{ color: '#ffffff' }}
+          >
+            Cherry Creek calm with concierge-level dentistry.
+            </h1>
             </div>
-            <div className="grid gap-4 text-sm text-white/80 sm:grid-cols-3">
-              <a href="tel:(303) 377-7744" className="flex items-center gap-2 hover:text-white">
-                <Phone className="h-4 w-4" /> (303) 377-7744
-              </a>
-              <a href="sms:(720) 864-1333" className="flex items-center gap-2 hover:text-white">
-                <MessageCircle className="h-4 w-4" /> (720) 864-1333
-              </a>
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" /> 5055 E Kentucky Ave, Denver
-              </div>
-            </div>
-          </div>
-          <div className="flex-1 space-y-4">
-            <div className="grid gap-4 sm:grid-cols-3">
-              {statCards.map((card) => (
-                <div key={card.title} className="rounded-2xl border border-white/20 bg-white/5 p-4 backdrop-blur">
-                  <p className="text-xs uppercase tracking-[0.3em] text-white/70">{card.title}</p>
-                  <p className="mt-3 text-sm text-white/80">{card.description}</p>
-                </div>
-              ))}
-            </div>
-            <div className="rounded-3xl bg-white/90 p-4 text-[var(--ink)] shadow-2xl">
-              <div className="relative h-60 overflow-hidden rounded-2xl">
-                <Image src="/images/drbright-patient.jpg" alt="Patient lounge" fill className="object-cover" />
-              </div>
-              <p className="mt-4 text-sm font-semibold">Inside our atrium-inspired lounge</p>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Story */}
@@ -291,14 +233,14 @@ export default function Home() {
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--teal)]">Step {index + 1}</p>
                   <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
                   <p className="text-sm text-[var(--soft-text)]">{step.detail}</p>
-                </div>
+            </div>
               ))}
             </div>
           </div>
-          <div className="rounded-3xl bg-[var(--pine)] p-8 text-white">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/70">Amenities</p>
+          <div className="rounded-3xl border border-[var(--shell)] bg-white p-8 text-[var(--pine)] shadow-sm">
+            <p className="text-xs uppercase tracking-[0.4em] text-[var(--sage)]">Amenities</p>
             <h2 className="mt-3 text-3xl font-semibold">Calm, modern, and tech-forward.</h2>
-            <ul className="mt-6 space-y-3 text-sm text-white/80">
+            <ul className="mt-6 space-y-3 text-sm text-[var(--soft-text)]">
               {amenities.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <Leaf className="mt-0.5 h-4 w-4 text-[var(--clay)]" />
@@ -306,11 +248,14 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <div className="mt-8 rounded-2xl bg-white/10 p-6">
-              <p className="text-sm text-white">
+            <div className="mt-8 rounded-2xl bg-[var(--surface)] p-6">
+              <p className="text-sm text-[var(--soft-text)]">
                 Memberships, online forms, and text-ready front desk support make every interaction simple.
               </p>
-              <Link href="/membership" className="mt-4 inline-flex items-center text-sm font-semibold text-[var(--clay)]">
+              <Link
+                href="/membership"
+                className="mt-4 inline-flex items-center text-sm font-semibold text-[var(--clay)] hover:text-[var(--teal)]"
+              >
                 Explore membership perks <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
@@ -361,41 +306,41 @@ export default function Home() {
       </section>
 
       {/* FAQ + CTA */}
-      <section className="bg-[var(--pine)] py-20 text-white">
+      <section className="bg-[var(--surface)] py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-2">
-          <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-white/70">FAQs</p>
-            <h2 className="mt-3 text-3xl font-semibold">Answers to the questions we hear most.</h2>
+          <div className="rounded-3xl border border-[var(--shell)] bg-white p-8 shadow-sm">
+            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">FAQs</p>
+            <h2 className="mt-3 text-3xl font-semibold text-[var(--pine)]">Answers to the questions we hear most.</h2>
             <div className="mt-8 space-y-4">
               {faqs.map((faq) => (
-                <details key={faq.question} className="rounded-2xl bg-white/10 p-5" open>
-                  <summary className="cursor-pointer text-lg font-semibold">{faq.question}</summary>
-                  <p className="mt-2 text-sm text-white/80">{faq.answer}</p>
+                <details key={faq.question} className="rounded-2xl border border-[var(--shell)] bg-[var(--surface)] p-5" open>
+                  <summary className="cursor-pointer text-lg font-semibold text-[var(--pine)]">{faq.question}</summary>
+                  <p className="mt-2 text-sm text-[var(--soft-text)]">{faq.answer}</p>
                 </details>
               ))}
             </div>
           </div>
-          <div className="rounded-3xl bg-white/10 p-8">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/70">Plan your visit</p>
-            <h3 className="mt-4 text-3xl font-semibold">Ready for a calmer dental experience?</h3>
-            <p className="mt-4 text-sm text-white/80">
+          <div className="rounded-3xl border border-[var(--shell)] bg-white p-8 shadow-sm">
+            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">Plan your visit</p>
+            <h3 className="mt-4 text-3xl font-semibold text-[var(--pine)]">Ready for a calmer dental experience?</h3>
+            <p className="mt-4 text-sm text-[var(--soft-text)]">
               Call, text, or send a message through our online form. We’ll guide you through patient forms, insurance questions,
               and scheduling the longer time you deserve.
             </p>
             <div className="mt-6 space-y-3 text-sm">
-              <a href="tel:(303) 377-7744" className="flex items-center gap-3 text-white hover:text-[var(--clay)]">
-                <Phone className="h-4 w-4" /> (303) 377-7744
+              <a href="tel:(303) 377-7744" className="flex items-center gap-3 text-[var(--pine)] hover:text-[var(--clay)]">
+                <Phone className="h-4 w-4 text-[var(--clay)]" /> (303) 377-7744
               </a>
-              <a href="sms:(720) 864-1333" className="flex items-center gap-3 text-white hover:text-[var(--clay)]">
-                <MessageCircle className="h-4 w-4" /> (720) 864-1333
+              <a href="sms:(720) 864-1333" className="flex items-center gap-3 text-[var(--pine)] hover:text-[var(--clay)]">
+                <MessageCircle className="h-4 w-4 text-[var(--clay)]" /> (720) 864-1333
               </a>
-              <div className="flex items-center gap-3 text-white/80">
-                <MapPin className="h-4 w-4" /> 5055 E Kentucky Ave, Denver, CO 80246
+              <div className="flex items-center gap-3 text-[var(--soft-text)]">
+                <MapPin className="h-4 w-4 text-[var(--clay)]" /> 5055 E Kentucky Ave, Denver, CO 80246
               </div>
             </div>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--pine)]"
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]"
             >
               Contact us
             </Link>

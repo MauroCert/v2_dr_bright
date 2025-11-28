@@ -88,27 +88,26 @@ export default function Services() {
   return (
     <div className="bg-[var(--canvas)] text-[var(--pine)]">
       {/* Hero */}
-      <section className="relative isolate overflow-hidden">
-        <div className="absolute inset-0 bg-[var(--pine)]" />
-        <div className="relative mx-auto max-w-6xl px-4 py-24 text-white">
-          <p className="text-xs uppercase tracking-[0.4em] text-white/70">Our services</p>
+      <section className="bg-[var(--surface)] py-24">
+        <div className="mx-auto max-w-6xl rounded-3xl border border-[var(--shell)] bg-white px-6 py-16 text-[var(--pine)] shadow-sm">
+          <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">Our services</p>
           <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">
             Comprehensive dentistry inspired by the calm, modern style of mylovelanddentist.com.
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-white/80">
+          <p className="mt-4 max-w-2xl text-lg text-[var(--soft-text)]">
             From preventive care to smile design, Cherry Creek South Dental mirrors the structure from v1 while refreshing every page with a softer, concierge aesthetic.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--pine)]"
+              className="inline-flex items-center rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]"
             >
               Request a visit
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
             <a
               href="tel:(303) 377-7744"
-              className="inline-flex items-center rounded-full border border-white px-6 py-3 text-sm font-semibold text-white"
+              className="inline-flex items-center rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)] hover:bg-[var(--pine)] hover:text-white"
             >
               Call (303) 377-7744
             </a>
@@ -202,17 +201,20 @@ export default function Services() {
       </section>
 
       {/* Contact CTA */}
-      <section className="bg-[var(--pine)] py-20 text-white">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 text-center">
+      <section className="bg-[var(--surface)] py-20">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 rounded-3xl border border-[var(--shell)] bg-white px-4 py-12 text-center text-[var(--pine)] shadow-sm">
           <h2 className="text-3xl font-semibold">Need help choosing the right service?</h2>
-          <p className="text-white/80">
+          <p className="text-[var(--soft-text)]">
             Call or text to reserve a longer appointment block tailored to your goals. Our front desk will send forms, insurance estimates, and help coordinate specialty care if needed.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a href="tel:(303) 377-7744" className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--pine)]">
+            <a href="tel:(303) 377-7744" className="rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]">
               Call (303) 377-7744
             </a>
-            <a href="sms:(720) 864-1333" className="rounded-full border border-white px-6 py-3 text-sm font-semibold text-white">
+            <a
+              href="sms:(720) 864-1333"
+              className="rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)] hover:bg-[var(--pine)] hover:text-white"
+            >
               Text (720) 864-1333
             </a>
           </div>

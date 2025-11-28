@@ -53,30 +53,37 @@ export default function GeneralDentistry() {
     <div className="bg-[var(--canvas)] text-[var(--pine)]">
       {/* Hero */}
       <section className="relative isolate overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/images/drbright-patient.jpg" alt="General dentistry" fill className="object-cover" />
-        </div>
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative mx-auto max-w-5xl px-4 py-24 text-white">
-          <p className="text-xs uppercase tracking-[0.4em] text-white/70">General dentistry</p>
-          <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">Preventive visits designed for calm, clarity, and connection.</h1>
-          <p className="mt-4 text-lg text-white/80">
-            Longer cleanings, AI diagnostics, and collaborative planning ensure every visit feels educational and uplifting.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/contact"
-              className="inline-flex items-center rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white"
-            >
-              Reserve a preventive visit
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <a
-              href="tel:(303) 377-7744"
-              className="inline-flex items-center rounded-full border border-white px-6 py-3 text-sm font-semibold text-white"
-            >
-              Call (303) 377-7744
-            </a>
+        <div className="absolute inset-0 bg-white" />
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-24 text-[var(--pine)] lg:flex-row lg:items-center">
+          <div className="flex-1 space-y-4">
+            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">General dentistry</p>
+            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
+              Preventive visits designed for calm, clarity, and connection.
+            </h1>
+            <p className="text-lg text-[var(--soft-text)]">
+              Longer cleanings, AI diagnostics, and collaborative planning ensure every visit feels educational and uplifting.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex items-center rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]"
+              >
+                Reserve a preventive visit
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <a
+                href="tel:(303) 377-7744"
+                className="inline-flex items-center rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)] hover:bg-[var(--pine)] hover:text-white"
+              >
+                Call (303) 377-7744
+              </a>
+            </div>
+          </div>
+          <div className="flex-1 rounded-3xl border border-[var(--shell)] bg-white p-6 shadow-sm">
+            <div className="relative h-64 w-full overflow-hidden rounded-2xl">
+              <Image src="/images/drbright-patient.jpg" alt="General dentistry" fill className="object-cover" />
+            </div>
+            <p className="mt-4 text-sm font-semibold text-[var(--soft-text)]">Preventive care inside Cherry Creek South Dental</p>
           </div>
         </div>
       </section>
@@ -175,17 +182,23 @@ export default function GeneralDentistry() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[var(--pine)] py-20 text-white">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 text-center">
+      <section className="bg-[var(--surface)] py-20">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 rounded-3xl border border-[var(--shell)] bg-white px-4 py-12 text-center text-[var(--pine)] shadow-sm">
           <h2 className="text-3xl font-semibold">Ready for preventive care that never feels rushed?</h2>
-          <p className="text-white/80">
+          <p className="text-[var(--soft-text)]">
             Text or call to reserve your longer visit. We’ll send forms, review insurance, and make sure your experience matches the calm energy of our office.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a href="sms:(720) 864-1333" className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--pine)]">
+            <a
+              href="sms:(720) 864-1333"
+              className="rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]"
+            >
               Text (720) 864-1333
             </a>
-            <Link href="/membership" className="rounded-full border border-white px-6 py-3 text-sm font-semibold text-white">
+            <Link
+              href="/membership"
+              className="rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)] hover:bg-[var(--pine)] hover:text-white"
+            >
               View membership perks
             </Link>
           </div>
