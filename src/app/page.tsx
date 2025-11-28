@@ -134,7 +134,10 @@ export default function Home() {
         </div>
         <div className="absolute inset-0 bg-black/75" />
         <div className="relative mx-auto flex max-w-4xl flex-col items-center justify-center px-4 py-32 text-center text-white">
-          <p className="text-xs uppercase tracking-[0.5em] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.65)]">
+          <p
+            className="text-xs uppercase tracking-[0.5em] drop-shadow-[0_6px_18px_rgba(0,0,0,0.65)]"
+            style={{ color: '#f8f4ee' }}
+          >
               Cherry Creek South Dental
             </p>
           <h1
