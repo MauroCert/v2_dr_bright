@@ -1,219 +1,343 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { 
+  ArrowRight, 
+  CheckCircle2, 
+  Heart, 
+  Sparkles, 
+  Shield, 
+  Smile, 
+  Zap, 
+  Clock,
+  Phone,
+  Users,
+} from 'lucide-react';
 
-const signatureServices = [
+const serviceCategories = [
   {
-    title: 'Dental Exams & Cleanings',
-    description:
-      '60–90 minute preventive visits with AI x-rays, oral cancer screenings, periodontal therapy, and judgement-free education.',
+    title: 'General & Family Dentistry',
+    subtitle: 'Preventive Care',
+    description: '60–90 minute preventive visits with AI x-rays, oral cancer screenings, and personalized care for the whole family.',
     href: '/services/general-dentistry',
-    badge: 'Preventive',
+    icon: Users,
+    color: '#2d8a5e',
+    features: ['Longer hygiene visits', 'Oral cancer screenings', 'Family-friendly care'],
     image: '/images/drbright-patient.jpg',
-    checklist: ['Longer hygiene visits', 'Oral cancer screenings', 'Personalized home-care coaching'],
   },
   {
-    title: 'Cosmetic Dentistry & Veneers',
-    description:
-      'Custom veneers, bonding, whitening, and facial aesthetics planned with digital previews and collaborative design.',
+    title: 'Cosmetic Dentistry',
+    subtitle: 'Smile Design',
+    description: 'Custom veneers, bonding, whitening, and facial aesthetics planned with digital previews and collaborative design.',
     href: '/services#cosmetic',
-    badge: 'Cosmetic',
+    icon: Sparkles,
+    color: '#e8734a',
+    features: ['Porcelain veneers', 'Professional whitening', 'Smile makeovers'],
     image: '/images/drbright-lobby.jpg',
-    checklist: ['Smile design mockups', 'Whitening plans', 'Facial aesthetics'],
   },
   {
     title: 'Invisalign® & Orthodontics',
-    description:
-      'Discreet aligner plans with digital scanners, remote-friendly check-ins, and retention coaching from Dr. Bright.',
+    subtitle: 'Clear Aligners',
+    description: 'Discreet aligner plans with digital scanners, remote-friendly check-ins, and retention coaching from Dr. Bright.',
     href: '/services#invisalign',
-    badge: 'Alignment',
+    icon: Smile,
+    color: '#1a2e44',
+    features: ['Digital impressions', 'Remote monitoring', 'Retention planning'],
     image: '/images/drbright-invisalign.png',
     imageType: 'logo',
-    checklist: ['Digital impressions', 'Tray coaching', 'Retention planning'],
+  },
+  {
+    title: 'Restorative Dentistry',
+    subtitle: 'Implants & Crowns',
+    description: 'Conservative restorative plans including implants, crowns, bridges, and bone preservation guided by CBCT scans.',
+    href: '/services#restorative',
+    icon: Shield,
+    color: '#2d8a5e',
+    features: ['Dental implants', 'Crowns & bridges', 'Full-mouth rehab'],
+    image: '/images/drbright-covid-badge.png',
+    imageType: 'logo',
   },
   {
     title: 'Emergency Dentistry',
-    description:
-      'Same-day relief for tooth pain, chipped teeth, or infections with calm bedside manner and longer appointment reserves.',
+    subtitle: 'Same-Day Care',
+    description: 'Same-day relief for tooth pain, chipped teeth, or infections with calm bedside manner and dedicated time.',
     href: '/services#emergency',
-    badge: 'Same-Day',
-    image: '/images/drbright-lobby.jpg',
-    checklist: ['Rapid diagnostics', 'Comfort menu', 'Medication coordination'],
-  },
-  {
-    title: 'Implants, Crowns & Bridges',
-    description:
-      'Conservative restorative plans including implants, crowns, bridges, and bone preservation guided by CBCT scans.',
-    href: '/services#restorative',
-    badge: 'Restorative',
-    image: '/images/drbright-covid-badge.png',
-    imageType: 'logo',
-    checklist: ['Guided implant partners', 'Immediate temporaries', 'Maintenance visits'],
+    icon: Zap,
+    color: '#e8734a',
+    features: ['Same-day appointments', 'Pain relief', 'After-hours support'],
+    image: '/images/drbright-patient.jpg',
   },
   {
     title: 'Sedation & Comfort',
-    description:
-      'Laughing gas, comfort amenities, and unrushed pacing for anxious patients or longer procedures.',
+    subtitle: 'Anxiety-Free Care',
+    description: 'Laughing gas, comfort amenities, and unrushed pacing for anxious patients or longer procedures.',
     href: '/services#sedation',
-    badge: 'Comfort',
-    image: '/images/drbright-patient.jpg',
-    checklist: ['Nitrous oxide', 'Weighted blankets', 'Longer appointment buffers'],
+    icon: Heart,
+    color: '#1a2e44',
+    features: ['Nitrous oxide', 'Weighted blankets', 'Extended appointments'],
+    image: '/images/drbright-lobby.jpg',
   },
 ];
 
-const otherTreatments = [
-  'Botox® and facial aesthetics add-ons',
+const additionalServices = [
+  'Botox® and facial aesthetics',
   'Whitening memberships & touch-ups',
   'Nightguards and TMJ support',
   'CBCT airway evaluations',
   'Membership plans for uninsured families',
+  'Dental sealants for kids',
 ];
 
 const faqs = [
   {
-    question: 'Do you offer online forms and scheduling?',
-    answer: 'Yes. Patients can request appointments, complete forms, and text the team for quick follow-ups just like on our v1 site.',
+    question: 'Do you accept dental insurance?',
+    answer: 'Yes, we work with most major PPO plans. Our team will verify your benefits and provide cost estimates before treatment.',
   },
   {
     question: 'What ages do you treat?',
-    answer: 'We welcome families, adults, young professionals, and seniors. Longer appointments help every age feel cared for.',
+    answer: 'We welcome families, adults, young professionals, and seniors. Our longer appointments help every age feel comfortable and cared for.',
   },
   {
-    question: 'Which technologies support your services?',
-    answer: 'AI-powered x-rays, CBCT imaging, intraoral scanners, Invisalign® software, and digital photography guide every plan.',
+    question: 'What technologies do you use?',
+    answer: 'AI-powered x-rays, CBCT imaging, intraoral scanners, Invisalign® software, and digital photography guide every treatment plan.',
+  },
+  {
+    question: 'How do I schedule an appointment?',
+    answer: 'Call us at (303) 377-7744, text us at (720) 864-1333, or use our online scheduling. We\'ll send forms and confirm your visit.',
   },
 ];
 
 export default function Services() {
   return (
-    <div className="bg-[var(--canvas)] text-[var(--pine)]">
-      {/* Hero */}
-      <section className="bg-[var(--surface)] py-24">
-        <div className="mx-auto max-w-6xl rounded-3xl border border-[var(--shell)] bg-white px-6 py-16 text-[var(--pine)] shadow-sm">
-          <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">Our services</p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">
-            Comprehensive dentistry inspired by the calm, modern style of mylovelanddentist.com.
+    <div className="bg-white">
+      {/* HERO */}
+      <section className="relative min-h-[50vh] flex items-center">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/drbright-lobby.jpg"
+            alt="Cherry Creek South Dental Services"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a2e44]/95 via-[#1a2e44]/80 to-[#1a2e44]/60" />
+        </div>
+        
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-20">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#f08565' }}>
+              Our Services
+            </p>
+            <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6" style={{ color: '#ffffff' }}>
+              Comprehensive Dentistry<br />for Every Smile Goal
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-[var(--soft-text)]">
-            From preventive care to smile design, Cherry Creek South Dental mirrors the structure from v1 while refreshing every page with a softer, concierge aesthetic.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+            <p className="text-xl mb-8" style={{ color: 'rgba(255,255,255,0.85)' }}>
+              From preventive care to smile transformations, we offer personalized treatments in a calming environment with longer appointments.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="tel:(303) 377-7744"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:scale-105"
+                style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+              >
+                <Phone className="h-5 w-5" />
+                Schedule a Visit
+              </a>
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:bg-white/20"
+                style={{ color: '#ffffff', border: '2px solid rgba(255,255,255,0.5)' }}
             >
-              Request a visit
-              <ArrowRight className="ml-2 h-4 w-4" />
+                Contact Us
+                <ArrowRight className="h-5 w-5" />
             </Link>
-            <a
-              href="tel:(303) 377-7744"
-              className="inline-flex items-center rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)] hover:bg-[var(--pine)] hover:text-white"
-            >
-              Call (303) 377-7744
-            </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Signature Services */}
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="mb-12 text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">Signature offerings</p>
-            <h2 className="mt-3 text-3xl font-semibold">Guided by longer appointments, honest education, and technology.</h2>
+      {/* SERVICE CATEGORIES */}
+      <section className="py-24 bg-[#fafafa]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+              What We Offer
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e]">
+              Services Tailored to Your Needs
+            </h2>
+            <p className="mt-4 text-[#4a4a5c] max-w-2xl mx-auto">
+              Every treatment is guided by longer appointments, honest education, and advanced technology.
+            </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {signatureServices.map((service) => (
-              <div key={service.title} className="rounded-3xl border border-[var(--shell)] bg-white shadow-sm">
-                <div className="relative h-48 overflow-hidden rounded-3xl rounded-b-none">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((service) => (
+              <Link
+                key={service.title}
+                href={service.href}
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              >
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className={service.imageType === 'logo' ? 'object-contain bg-white p-8' : 'object-cover'}
+                    className={
+                      service.imageType === 'logo'
+                        ? 'object-contain bg-gradient-to-br from-gray-50 to-white p-8'
+                        : 'object-cover group-hover:scale-105 transition-transform duration-500'
+                    }
                   />
-                  <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--teal)]">
-                    {service.badge}
-                  </span>
+                  <div 
+                    className="absolute top-4 left-4 w-12 h-12 rounded-xl flex items-center justify-center"
+                    style={{ backgroundColor: service.color }}
+                  >
+                    <service.icon className="h-6 w-6 text-white" />
+                  </div>
                 </div>
-                <div className="space-y-4 p-6">
-                  <h3 className="text-xl font-semibold text-[var(--pine)]">{service.title}</h3>
-                  <p className="text-sm text-[var(--soft-text)]">{service.description}</p>
-                  <ul className="space-y-2 text-sm text-[var(--soft-text)]">
-                    {service.checklist.map((item) => (
-                      <li key={item} className="flex items-center gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-[var(--clay)]" /> {item}
+
+                {/* Content */}
+                <div className="p-6">
+                  <p className="text-sm font-medium uppercase tracking-wide mb-2" style={{ color: service.color }}>
+                    {service.subtitle}
+                  </p>
+                  <h3 className="text-xl font-semibold text-[#1a1a2e] mb-3 group-hover:text-[#2d8a5e] transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-[#4a4a5c] text-sm leading-relaxed mb-4">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-4">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-2 text-sm text-[#4a4a5c]">
+                        <CheckCircle2 className="h-4 w-4 text-[#2d8a5e] flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link href={service.href} className="inline-flex items-center text-sm font-semibold text-[var(--clay)]">
+                  <div className="flex items-center text-[#e8734a] font-semibold text-sm">
                     Learn more
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform" />
+                  </div>
                 </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ADDITIONAL SERVICES */}
+      <section className="py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-[#2d8a5e] mb-4">
+                Additional Treatments
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e] mb-6">
+                More Ways We Can Help
+              </h2>
+              <p className="text-[#4a4a5c] text-lg leading-relaxed mb-8">
+                Beyond our core services, we offer specialized treatments to support your complete oral health and wellness.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {additionalServices.map((service) => (
+                  <div key={service} className="flex items-center gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-[#2d8a5e] flex-shrink-0" />
+                    <span className="text-[#4a4a5c]">{service}</span>
+            </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/drbright-patient.jpg"
+                  alt="Additional dental services"
+                  width={600}
+                  height={450}
+                  className="w-full h-[400px] object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-48 h-48 rounded-3xl bg-[#2d8a5e]/10 -z-10" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US - Quick Bar */}
+      <section className="py-6 bg-[#1a2e44]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+            {[
+              { label: 'Longer Appointments', icon: Clock },
+              { label: 'Advanced Technology', icon: Zap },
+              { label: 'Family-Owned', icon: Heart },
+              { label: 'Patient-First Care', icon: Users },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center gap-3" style={{ color: '#ffffff' }}>
+                <item.icon className="h-5 w-5" style={{ color: '#f08565' }} />
+                <span className="font-medium">{item.label}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Other treatments */}
-      <section className="bg-[var(--surface)] py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid gap-10 lg:grid-cols-2">
-            <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">Other treatments to consider</p>
-              <h2 className="mt-3 text-3xl font-semibold">Built from the same v1 sitemap, now styled for v2.</h2>
-              <p className="mt-4 text-[var(--soft-text)]">
-                Every service page includes FAQs and cross-links so patients can easily navigate between cosmetic, restorative, preventive, and emergency care—mirroring the new guidelines.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-[var(--shell)] bg-white p-6 shadow-sm">
-              <ul className="space-y-3 text-sm text-[var(--soft-text)]">
-                {otherTreatments.map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <CheckCircle2 className="h-4 w-4 text-[var(--clay)]" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      {/* FAQs */}
+      <section className="py-24 bg-[#fafafa]">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+              Frequently Asked Questions
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e]">
+              Questions About Our Services?
+            </h2>
           </div>
-        </div>
-      </section>
 
-      {/* FAQ */}
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="mb-10 text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">FAQs</p>
-            <h2 className="mt-3 text-3xl font-semibold">Your questions, answered with the same calm energy as our office.</h2>
-          </div>
           <div className="space-y-4">
             {faqs.map((faq) => (
-              <details key={faq.question} className="rounded-2xl border border-[var(--shell)] bg-white p-5">
-                <summary className="cursor-pointer text-lg font-semibold text-[var(--pine)]">{faq.question}</summary>
-                <p className="mt-2 text-sm text-[var(--soft-text)]">{faq.answer}</p>
+              <details 
+                key={faq.question} 
+                className="group bg-white rounded-2xl border border-gray-100 shadow-sm"
+              >
+                <summary className="flex items-center justify-between cursor-pointer p-6 text-lg font-semibold text-[#1a1a2e] hover:text-[#2d8a5e] transition-colors">
+                  {faq.question}
+                  <ArrowRight className="h-5 w-5 text-[#4a4a5c] group-open:rotate-90 transition-transform" />
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-[#4a4a5c] leading-relaxed">{faq.answer}</p>
+                </div>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="bg-[var(--surface)] py-20">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 rounded-3xl border border-[var(--shell)] bg-white px-4 py-12 text-center text-[var(--pine)] shadow-sm">
-          <h2 className="text-3xl font-semibold">Need help choosing the right service?</h2>
-          <p className="text-[var(--soft-text)]">
-            Call or text to reserve a longer appointment block tailored to your goals. Our front desk will send forms, insurance estimates, and help coordinate specialty care if needed.
+      {/* CTA */}
+      <section className="py-24 bg-[#1a2e44]">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6" style={{ color: '#ffffff' }}>
+            Ready to Experience Better Dentistry?
+          </h2>
+          <p className="text-xl mb-10" style={{ color: 'rgba(255,255,255,0.85)' }}>
+            Schedule a visit and discover the difference longer appointments, modern technology, and genuine care can make.
           </p>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <a href="tel:(303) 377-7744" className="rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]">
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="tel:(303) 377-7744"
+              className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:scale-105"
+              style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+            >
+              <Phone className="h-5 w-5" />
               Call (303) 377-7744
             </a>
             <a
               href="sms:(720) 864-1333"
-              className="rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)] hover:bg-[var(--pine)] hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:bg-white/20"
+              style={{ color: '#ffffff', border: '2px solid rgba(255,255,255,0.5)' }}
             >
               Text (720) 864-1333
             </a>

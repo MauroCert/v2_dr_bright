@@ -18,125 +18,108 @@ export default function Header() {
     { name: 'Contact', href: '/contact' },
   ];
 
-  const quickLinks = [
-    {
-      icon: MapPin,
-      label: '5055 E Kentucky Ave, Denver',
-      href: 'https://maps.google.com/?q=5055+E+Kentucky+Ave,+Denver,+CO+80246',
-    },
-    {
-      icon: Clock,
-      label: 'Mon 8-5 • Tue-Wed 8-4 • Thu 7-1',
-    },
-  ];
-
   return (
-    <header className="sticky top-0 z-50 shadow-[0_1px_0_rgba(15,25,32,0.08)]">
-      <div className="bg-[var(--pine)] text-[var(--surface)]">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em]">
-          {quickLinks.map((item) => {
-            const Icon = item.icon;
-            return item.href ? (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[var(--surface)] hover:text-[var(--clay)]"
-              >
-                <Icon className="h-3.5 w-3.5" />
-                {item.label}
-              </a>
-            ) : (
-              <span key={item.label} className="flex items-center gap-2 text-[var(--surface)]/80">
-                <Icon className="h-3.5 w-3.5" />
-                {item.label}
-              </span>
-            );
-          })}
-          <div className="flex items-center gap-4 text-[var(--surface)]">
-            <a href="tel:(303) 377-7744" className="flex items-center gap-2 hover:text-[var(--clay)]">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+      {/* Top bar - Navy */}
+      <div className="bg-[var(--navy)]" style={{ color: '#ffffff' }}>
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-xs tracking-wide">
+          {/* Left - Address */}
+          <div className="flex items-center gap-2">
+            <MapPin className="h-3.5 w-3.5" style={{ color: '#ffffff', opacity: 0.8 }} />
+            <span className="uppercase font-medium" style={{ color: '#ffffff' }}>5055 E Kentucky Ave, Denver</span>
+          </div>
+          
+          {/* Center - Hours */}
+          <div className="hidden md:flex items-center gap-2">
+            <Clock className="h-3.5 w-3.5" style={{ color: '#ffffff', opacity: 0.8 }} />
+            <span className="uppercase" style={{ color: '#ffffff' }}>Mon 8-5 • Tue-Wed 8-4 • Thu 7-1</span>
+          </div>
+          
+          {/* Right - Phone numbers */}
+          <div className="flex items-center gap-4">
+            <a
+              href="tel:(303) 377-7744"
+              className="flex items-center gap-1.5 transition-colors hover:opacity-80"
+              style={{ color: '#ffffff' }}
+            >
               <Phone className="h-3.5 w-3.5" />
-              (303) 377-7744
+              <span>(303) 377-7744</span>
             </a>
-            <a href="sms:(720) 864-1333" className="flex items-center gap-2 hover:text-[var(--clay)]">
+            <a
+              href="sms:(720) 864-1333"
+              className="flex items-center gap-1.5 transition-colors hover:opacity-80"
+              style={{ color: '#ffffff' }}
+            >
               <MessageCircle className="h-3.5 w-3.5" />
-              (720) 864-1333
+              <span>(720) 864-1333</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div className="bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/75">
-        <div className="mx-auto flex max-w-6xl items-center gap-6 px-4 py-4">
-          <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/logo.avif"
-              alt="Cherry Creek South Dental"
-              width={220}
-              height={64}
-              priority
-              className="h-14 w-auto"
-            />
-          </Link>
-          <nav className="hidden flex-1 items-center justify-center gap-6 text-sm font-medium text-[var(--pine)] md:flex">
+      {/* Main navigation */}
+      <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-4">
+        <Link href="/" className="flex-shrink-0">
+          <Image 
+            src="/logo.avif" 
+            alt="Cherry Creek South Dental" 
+            width={220} 
+            height={60} 
+            priority 
+            className="h-14 w-auto" 
+          />
+        </Link>
+        
+        <nav className="hidden flex-1 items-center justify-end gap-1 text-sm font-medium text-[var(--text-dark)] lg:flex">
+          {navigation.map((item) => (
+            <Link 
+              key={item.name} 
+              href={item.href} 
+              className="px-4 py-2 rounded-full transition-colors hover:text-[var(--green)] hover:bg-[var(--light-gray)]"
+            >
+              {item.name}
+            </Link>
+          ))}
+          <a
+            href="tel:(303) 377-7744"
+            className="ml-2 rounded-full bg-[var(--coral)] px-5 py-2.5 text-white font-semibold transition hover:bg-[var(--coral-dark)]"
+          >
+            Book Now
+          </a>
+        </nav>
+        
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="ml-auto rounded-full p-2.5 text-[var(--text-dark)] hover:bg-[var(--light-gray)] transition-colors lg:hidden"
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {isMenuOpen && (
+        <div className="border-t border-[var(--border)] bg-white px-4 pb-6 pt-4 lg:hidden">
+          <nav className="flex flex-col gap-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="rounded-full px-3 py-2 transition hover:bg-[var(--shell)] hover:text-[var(--teal)]"
+                className="rounded-xl px-4 py-3 text-[var(--text-dark)] hover:bg-[var(--light-gray)] hover:text-[var(--green)] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-          </nav>
-          <div className="ml-auto hidden items-center gap-3 md:flex">
             <a
               href="tel:(303) 377-7744"
-              className="rounded-full border border-[var(--teal)] px-4 py-2 text-sm font-semibold text-[var(--teal)] transition hover:bg-[var(--teal)] hover:text-white"
+              className="mt-2 rounded-full bg-[var(--coral)] px-4 py-3 text-center font-semibold text-white hover:bg-[var(--coral-dark)] transition-colors"
             >
-              Call
+              Book Now
             </a>
-            <Link
-              href="/contact"
-              className="rounded-full bg-[var(--clay)] px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--teal)]"
-            >
-              Request a Visit
-            </Link>
-          </div>
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="ml-auto rounded-full border border-[var(--pine)] p-2 text-[var(--pine)] md:hidden"
-            aria-label="Toggle navigation menu"
-          >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          </nav>
         </div>
-
-        {isMenuOpen && (
-          <div className="border-t border-[var(--shell)] bg-white/95 px-4 pb-6 pt-4 md:hidden">
-            <nav className="flex flex-col gap-3 text-sm font-medium text-[var(--pine)]">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="rounded-2xl border border-transparent px-3 py-2 hover:border-[var(--shell)]"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <Link
-                href="/contact"
-                className="rounded-full bg-[var(--clay)] px-4 py-2 text-center font-semibold text-white"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Request a Visit
-              </Link>
-            </nav>
-          </div>
-        )}
-      </div>
+      )}
     </header>
   );
 }

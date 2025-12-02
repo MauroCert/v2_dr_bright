@@ -121,11 +121,11 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="mt-6 rounded-2xl border border-[var(--shell)] bg-[var(--surface)] p-6 text-[var(--pine)]">
-              <p className="text-sm font-medium text-[var(--pine)]">
+            <div className="mt-6 rounded-2xl bg-[var(--pine)]/90 p-6 text-white">
+              <p className="text-sm font-medium">
                 “We provide the best quality oral and overall healthcare through honesty, education, and joyful experiences.”
               </p>
-              <p className="mt-3 text-xs uppercase tracking-[0.3em] text-[var(--sage)]">Cherry Creek South Dental</p>
+              <p className="mt-3 text-xs uppercase tracking-[0.3em] text-white/70">Cherry Creek South Dental</p>
             </div>
           </div>
         </div>
@@ -189,17 +189,17 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[var(--surface)] py-16">
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-3xl border border-[var(--shell)] bg-white px-4 py-12 text-center text-[var(--pine)] shadow-sm">
+      <section className="bg-[var(--pine)] py-16 text-white">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 text-center">
           <h2 className="text-3xl font-semibold">Ready to experience dentistry that moves at your pace?</h2>
-          <p className="text-[var(--soft-text)]">
+          <p className="text-white/80">
             Call, text, or request an appointment online. We’ll guide you through forms, insurance, and finding the time that works best for you.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a href="tel:(303) 377-7744" className="rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]">
+            <a href="tel:(303) 377-7744" className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--pine)]">
               Call (303) 377-7744
             </a>
-            <a href="sms:(720) 864-1333" className="rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)] hover:bg-[var(--pine)] hover:text-white">
+            <a href="sms:(720) 864-1333" className="rounded-full border border-white px-6 py-3 text-sm font-semibold text-white">
               Text (720) 864-1333
             </a>
           </div>

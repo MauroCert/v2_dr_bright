@@ -3,350 +3,487 @@ import Link from 'next/link';
 import {
   ArrowRight,
   CheckCircle2,
-  Leaf,
-  MapPin,
-  MessageCircle,
-  Phone,
-  Sparkles,
   Star,
+  Heart,
+  Shield,
+  Sparkles,
+  Users,
+  Clock,
+  MapPin,
+  Phone,
+  MessageCircle,
+  Send,
+  Calendar,
+  FileText,
+  MessageSquare,
 } from 'lucide-react';
 
-const services = [
-  {
-    title: 'Cosmetic & Facial Aesthetics',
-    description: 'Veneers, bonding, whitening, Botox, and smile design plans tailored with digital previews.',
-    href: '/services#cosmetic',
-    tag: 'Confidence',
-    image: '/images/drbright-patient.jpg',
-  },
-  {
-    title: 'Comprehensive Exams & Cleanings',
-    description: 'Extended appointments with periodontal therapy, oral cancer screenings, and co-created plans.',
-    href: '/services#preventive',
-    tag: 'Wellness',
-    image: '/images/drbright-lobby.jpg',
-  },
-  {
-    title: 'Invisalign® & Orthodontics',
-    description: 'Clear aligner care with concierge check-ins, digital impressions, and retention guidance.',
-    href: '/services#invisalign',
-    tag: 'Alignment',
-    image: '/images/drbright-invisalign.png',
-    imageType: 'logo',
-  },
-  {
-    title: 'Implants, Crowns & Restorations',
-    description: 'Conservative restorative dentistry, bridges, implants, and same-day answers.',
+export default function Home() {
+  // Service options - "I'm looking for..." style
+  const serviceOptions = [
+    {
+      title: "I'm looking for a new dentist",
+      subtitle: 'Family & General Dentistry',
+      description: 'Longer appointments, personalized care, and a calming atmosphere for the whole family.',
+      icon: Users,
+      href: '/services#general',
+      color: 'coral',
+    },
+    {
+      title: 'I want to improve my smile',
+      subtitle: 'Cosmetic Dentistry',
+      description: 'Veneers, whitening, Invisalign®, and facial aesthetics to enhance your confidence.',
+      icon: Sparkles,
+      href: '/services#cosmetic',
+      color: 'green',
+    },
+    {
+      title: 'I need tooth replacement',
+      subtitle: 'Restorative Dentistry',
+      description: 'Implants, crowns, bridges, and full-mouth rehabilitation with modern technology.',
+      icon: Shield,
     href: '/services#restorative',
-    tag: 'Restorative',
-    image: '/images/drbright-covid-badge.png',
-    imageType: 'logo',
-  },
-];
-
-const patientPromises = [
-  'Treatment plans are crafted together so you always understand your options.',
-  'A calming atrium with natural light, plants, and longer visits keeps stress away.',
-  'Technology like AI-powered x-rays, CBCT, and scanners provide clarity and precision.',
-];
-
-const visitSteps = [
-  {
-    title: 'Warm Welcome',
-    detail: 'Atrium check-in, beverage bar, and time to share goals with the team.',
-  },
-  {
-    title: 'Digital Diagnostics',
-    detail: 'AI-assisted x-rays, CBCT when needed, and intraoral photography for context.',
-  },
-  {
-    title: 'Co-Planning',
-    detail: 'Dr. Bright reviews everything chairside so decisions are collaborative and conservative.',
-  },
-  {
-    title: 'Comfort Menu',
-    detail: 'Laughing gas, weighted blankets, curated playlists, and unrushed pacing.',
-  },
-];
-
-const amenities = [
-  'Atrium lounge with greenery and natural light',
-  'Top-of-the-line digital scanner + CBCT imaging',
-  'AI x-ray review for early detection',
-  'Facial aesthetics to complement dentistry',
-];
-
-const techHighlights = [
-  {
-    heading: 'AI-Powered Diagnostics',
-    text: 'We pair human expertise with AI to spot changes fast and explain them clearly.',
-  },
-  {
-    heading: 'CBCT + 3D Imaging',
-    text: 'Cone beam imaging and TMJ/bone density scans guide implants, Invisalign®, and airway insight.',
-  },
-  {
-    heading: 'Digital Comforts',
-    text: 'Intraoral scanners, same-day answers via text, and online forms keep visits seamless.',
-  },
-];
-
-const faqs = [
-  {
-    question: 'What makes Cherry Creek South Dental different?',
-    answer:
-      'We are an independent, family-owned office that schedules fewer patients per day so every visit feels calm, collaborative, and personalized.',
-  },
-  {
-    question: 'Do you really offer longer cleaning appointments?',
-    answer:
-      'Yes. Preventive visits are typically 60–90 minutes so we can complete diagnostics, answer questions, and finish treatment without rushing.',
-  },
-  {
-    question: 'What services can I schedule online?',
-    answer:
-      'Everything from preventive care and Invisalign® consultations to cosmetic visits and emergency dentistry—our team will help you find the right time.',
+      color: 'navy',
     },
   ];
 
+  // Quick links
+  const quickLinks = [
+    { name: 'Meet Dr. Bright', href: '/about/dr-bright', icon: Users },
+    { name: 'Patient Forms', href: '/patient-info/forms', icon: FileText },
+    { name: 'Location & Hours', href: '/contact', icon: Clock },
+    { name: 'Patient Stories', href: '/testimonials', icon: MessageSquare },
+  ];
+
+  // Why choose us - numbered values
+  const whyChooseUs = [
+    {
+      number: '01',
+      title: 'Family-Owned Practice',
+      description: 'Unlike corporate dental chains, we treat every patient like family with personalized attention and genuine care.',
+    },
+    {
+      number: '02',
+      title: 'Patient-First Philosophy',
+      description: 'We present all treatment options and make decisions together. Your comfort and understanding come first.',
+    },
+    {
+      number: '03',
+      title: 'Longer Appointments',
+      description: 'No rushing. Our extended hygiene visits allow thorough care and time to address all your questions.',
+    },
+    {
+      number: '04',
+      title: 'Advanced Technology',
+      description: 'AI-assisted x-rays, CBCT imaging, digital scanners, and same-day solutions for better outcomes.',
+    },
+    {
+      number: '05',
+      title: 'Calming Atmosphere',
+      description: 'Our beautiful atrium with natural plants creates a relaxing environment that eases dental anxiety.',
+    },
+  ];
+
+  // Testimonials
   const testimonials = [
     {
       name: 'Sarah M.',
-    quote: '“The longer appointments felt luxurious. I finally understand my treatment plan and never felt rushed.”',
+      quote: 'Dr. Bright and his team made me feel completely comfortable. The longer appointment times really make a difference.',
     },
     {
       name: 'Mike R.',
-    quote: '“Family-owned practice with modern tech. AI x-rays plus a calm atrium made my visit stress-free.”',
+      quote: 'Family-owned practice with modern technology. The AI x-rays are amazing and they explain everything clearly.',
     },
     {
       name: 'Jennifer L.',
-    quote: '“They walk you through every option and the atmosphere is spa-like. I send all of my friends here.”',
+      quote: 'The calming atmosphere and patient-first approach is exactly what I needed. Highly recommend!',
     },
   ];
 
-export default function Home() {
   return (
-    <div className="bg-[var(--canvas)] text-[var(--ink)]">
-      {/* Hero */}
-      <section className="relative isolate overflow-hidden">
+    <div className="bg-white">
+      {/* HERO - Full width with tagline */}
+      <section className="relative min-h-[70vh] flex items-center">
+        {/* Background Image */}
         <div className="absolute inset-0">
-          <Image src="/hero.avif" alt="Cherry Creek South Dental hero" fill className="object-cover" priority />
+          <Image
+            src="/hero.avif"
+            alt="Cherry Creek South Dental Office"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a2e44]/90 via-[#1a2e44]/70 to-transparent" />
         </div>
-        <div className="absolute inset-0 bg-black/75" />
-        <div className="relative mx-auto flex max-w-4xl flex-col items-center justify-center px-4 py-32 text-center text-white">
-          <p
-            className="text-xs uppercase tracking-[0.5em] drop-shadow-[0_6px_18px_rgba(0,0,0,0.65)]"
-            style={{ color: '#f8f4ee' }}
-          >
+        
+        {/* Content - Left aligned */}
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full">
+          <div className="max-w-2xl">
+            <Image
+              src="/images/drbright-logo.png"
+              alt="Cherry Creek South Dental"
+              width={160}
+              height={160}
+              className="h-20 w-auto mb-8 drop-shadow-xl"
+              priority
+            />
+            <p className="text-lg uppercase tracking-[0.2em] mb-4" style={{ color: '#f08565' }}>
               Cherry Creek South Dental
             </p>
-          <h1
-            className="mt-6 text-4xl font-semibold leading-tight text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.7)] sm:text-5xl"
-            style={{ color: '#ffffff' }}
-          >
-            Cherry Creek calm with concierge-level dentistry.
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6" style={{ color: '#ffffff' }}>
+              Care you can trust.<br />
+              <span className="font-semibold">Experience you deserve.</span>
             </h1>
-            </div>
-      </section>
-
-      {/* Story */}
-      <section className="py-20">
-        <div className="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-2 lg:items-center">
-          <div className="relative min-h-[360px] overflow-hidden rounded-3xl shadow-xl">
-            <Image src="/images/drbright-lobby.jpg" alt="Atrium lobby" fill className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 space-y-2 text-white">
-              <p className="text-xs uppercase tracking-[0.4em] text-white/70">Our Story</p>
-              <p className="text-2xl font-semibold">Family-owned, calm, and collaborative dentistry for Denver.</p>
-            </div>
-          </div>
-          <div className="space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">Why families choose us</p>
-            <h2 className="text-3xl font-semibold">Longer visits. Honest guidance. Technology that feels human.</h2>
-            <p className="text-lg text-[var(--soft-text)]">
-              Dr. Bright spends more time with each patient—often 60–90 minutes—so treatment feels conversational, never rushed.
-              We plan care together, integrate AI for diagnostics, and keep anxiety low with a serene atrium filled with plants and natural light.
+            <p className="text-xl mb-10 max-w-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
+              Family-owned dentistry in Denver with longer appointments, modern technology, and a calming atmosphere.
             </p>
-            <ul className="space-y-3 text-sm text-[var(--soft-text)]">
-              {patientPromises.map((promise) => (
-                <li key={promise} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-[var(--clay)]" />
-                  <span>{promise}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/about" className="inline-flex items-center rounded-full border border-[var(--teal)] px-5 py-2 text-sm font-semibold text-[var(--teal)] hover:bg-[var(--teal)] hover:text-white">
-                Learn about the practice
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link href="/about/dr-bright" className="inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold text-[var(--clay)] hover:text-[var(--teal)]">
-                Meet Dr. Bright
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="bg-[var(--surface)] py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="mb-10 text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">Comprehensive services</p>
-            <h2 className="mt-3 text-3xl font-semibold">Everything from preventive care to cosmetics in one calm space.</h2>
-            <p className="mt-3 text-[var(--soft-text)]">Explore the same services from v1 with refreshed layouts inspired by McKee Family Dentistry.</p>
-          </div>
-          <div className="grid gap-6 lg:grid-cols-2">
-            {services.map((service) => (
-              <div key={service.title} className="group overflow-hidden rounded-3xl border border-[var(--shell)]/60 bg-white shadow-sm">
-                <div className="relative h-56 overflow-hidden border-b border-[var(--shell)]/40">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className={service.imageType === 'logo' ? 'object-contain bg-white p-10' : 'object-cover'}
-                  />
-                  <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--teal)]">
-                    {service.tag}
-                  </span>
-                </div>
-                <div className="space-y-3 p-6">
-                  <h3 className="text-2xl font-semibold text-[var(--pine)]">{service.title}</h3>
-                  <p className="text-[var(--soft-text)]">{service.description}</p>
-                  <Link href={service.href} className="inline-flex items-center text-sm font-semibold text-[var(--clay)]">
-                    View details
-                    <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Experience */}
-      <section className="py-20">
-        <div className="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-2">
-          <div className="rounded-3xl border border-[var(--shell)] bg-white p-8 shadow-sm">
-            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">What to expect</p>
-            <h2 className="mt-3 text-3xl font-semibold">A visit that feels like a guided conversation.</h2>
-            <div className="mt-8 space-y-4">
-              {visitSteps.map((step, index) => (
-                <div key={step.title} className="rounded-2xl bg-[var(--surface)] p-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--teal)]">Step {index + 1}</p>
-                  <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
-                  <p className="text-sm text-[var(--soft-text)]">{step.detail}</p>
-            </div>
-              ))}
-            </div>
-          </div>
-          <div className="rounded-3xl border border-[var(--shell)] bg-white p-8 text-[var(--pine)] shadow-sm">
-            <p className="text-xs uppercase tracking-[0.4em] text-[var(--sage)]">Amenities</p>
-            <h2 className="mt-3 text-3xl font-semibold">Calm, modern, and tech-forward.</h2>
-            <ul className="mt-6 space-y-3 text-sm text-[var(--soft-text)]">
-              {amenities.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <Leaf className="mt-0.5 h-4 w-4 text-[var(--clay)]" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 rounded-2xl bg-[var(--surface)] p-6">
-              <p className="text-sm text-[var(--soft-text)]">
-                Memberships, online forms, and text-ready front desk support make every interaction simple.
-              </p>
-              <Link
-                href="/membership"
-                className="mt-4 inline-flex items-center text-sm font-semibold text-[var(--clay)] hover:text-[var(--teal)]"
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="tel:(303) 377-7744"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold transition hover:scale-105"
+                style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
               >
-                Explore membership perks <ArrowRight className="ml-2 h-4 w-4" />
+                <Calendar className="h-5 w-5" />
+                Schedule an Appointment
+              </a>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold transition hover:bg-white/20"
+                style={{ color: '#ffffff', border: '2px solid rgba(255,255,255,0.5)' }}
+              >
+                Learn About Us
+                <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Technology */}
-      <section className="bg-[var(--surface)] py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="mb-10 text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">Technology + comfort</p>
-            <h2 className="mt-3 text-3xl font-semibold">Tools that mirror the experience on mylovelanddentist.com.</h2>
+      {/* SERVICE OPTIONS - "I'm looking for..." cards */}
+      <section className="py-20 bg-[#fafafa]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-6">
+            {serviceOptions.map((option) => (
+              <Link
+                key={option.title}
+                href={option.href}
+                className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              >
+                <div 
+                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
+                  style={{ 
+                    backgroundColor: option.color === 'coral' ? '#e8734a' : 
+                                     option.color === 'green' ? '#2d8a5e' : '#1a2e44'
+                  }}
+                >
+                  <option.icon className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-[#1a1a2e] mb-2 group-hover:text-[#2d8a5e] transition-colors">
+                  {option.title}
+                </h3>
+                <p className="text-sm font-medium text-[#e8734a] uppercase tracking-wide mb-3">
+                  {option.subtitle}
+                </p>
+                <p className="text-[#4a4a5c] leading-relaxed">
+                  {option.description}
+                </p>
+                <div className="mt-6 flex items-center text-[#2d8a5e] font-semibold">
+                  Learn more
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform" />
+                </div>
+              </Link>
+            ))}
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {techHighlights.map((tech) => (
-              <div key={tech.heading} className="rounded-3xl border border-[var(--shell)]/60 bg-white p-6 shadow-sm">
-                <Sparkles className="h-6 w-6 text-[var(--clay)]" />
-                <h3 className="mt-4 text-xl font-semibold">{tech.heading}</h3>
-                <p className="mt-2 text-sm text-[var(--soft-text)]">{tech.text}</p>
+        </div>
+      </section>
+
+      {/* QUICK LINKS BAR */}
+      <section className="py-4 bg-[#1a2e44]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center md:justify-between items-center gap-4">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="flex items-center gap-3 px-6 py-3 rounded-full transition-colors hover:bg-white/10"
+                style={{ color: '#ffffff' }}
+              >
+                <link.icon className="h-5 w-5" style={{ color: '#f08565' }} />
+                <span className="font-medium">{link.name}</span>
+              </Link>
+              ))}
+            </div>
+          </div>
+      </section>
+
+      {/* WELCOME / ABOUT SECTION */}
+      <section className="py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image Side */}
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/drbright-lobby.jpg"
+                  alt="Dr. Bright's welcoming dental office"
+                  width={600}
+                  height={500}
+                  className="w-full h-[500px] object-cover"
+                />
+              </div>
+              {/* Floating accent */}
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-3xl bg-[#e8734a]/10 -z-10" />
+              <div className="absolute -top-6 -left-6 w-32 h-32 rounded-2xl bg-[#2d8a5e]/10 -z-10" />
+            </div>
+
+            {/* Content Side */}
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+                Welcome to Cherry Creek South Dental
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e] leading-tight mb-6">
+                Comprehensive Care You Can Trust in Denver
+              </h2>
+              <div className="space-y-4 text-[#4a4a5c] text-lg leading-relaxed">
+                <p>
+                  With a focus on patient comfort and conservative care, Cherry Creek South Dental is more than a dentist's office. It's a home for devoted, dedicated care where your desires and comfort come first.
+                </p>
+                <p>
+                  Dr. Bright and his team offer longer appointment times, thorough explanations, and treatment plans made together with you—not for you. We believe everyone deserves an unmatched level of gentle care based on exceptional quality and compassion.
+                </p>
+                <p>
+                  From routine cleanings and Invisalign® to dental implants and facial aesthetics, we're equipped to handle all your dental healthcare needs while ensuring you feel comfortable and at ease.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition hover:opacity-90"
+                  style={{ backgroundColor: '#2d8a5e', color: '#ffffff' }}
+                >
+                  About Our Practice
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/about/dr-bright"
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition hover:bg-[#1a2e44] hover:text-white"
+                  style={{ border: '2px solid #1a2e44', color: '#1a2e44' }}
+                >
+                  Meet Dr. Bright
+              </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US - Numbered list */}
+      <section className="py-24 bg-[#1a2e44]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#f08565' }}>
+              Why Choose Us
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold leading-tight" style={{ color: '#ffffff' }}>
+              What Sets Us Apart
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <div 
+                key={item.number}
+                className={`relative p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 ${
+                  index === 2 ? 'lg:col-span-1 md:col-span-2 lg:col-span-1' : ''
+                }`}
+                style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
+              >
+                <span 
+                  className="text-5xl font-bold mb-4 block"
+                  style={{ color: '#e8734a' }}
+                >
+                  {item.number}
+                </span>
+                <h3 className="text-xl font-semibold mb-3" style={{ color: '#ffffff' }}>
+                  {item.title}
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.75)' }} className="leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="mb-10 text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">Reviews</p>
-            <h2 className="mt-3 text-3xl font-semibold">Denver families share the calm they feel here.</h2>
+      {/* MEET DR. BRIGHT - Simple banner */}
+      <section className="py-24 bg-[#fafafa]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid lg:grid-cols-5 gap-12 items-center">
+            {/* Content - 3 cols */}
+            <div className="lg:col-span-3">
+              <p className="text-sm font-semibold uppercase tracking-widest text-[#2d8a5e] mb-4">
+                Meet Your Dentist
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e] leading-tight mb-6">
+                Dr. Bright
+              </h2>
+              <p className="text-[#4a4a5c] text-lg leading-relaxed mb-6">
+                Dr. Bright combines advanced technology with a collaborative mindset. He cares for families who value detailed explanations, patient-first philosophies, and a relaxing environment.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  'Member of leading continuing-education study clubs',
+                  'Conservative treatment planning done with patients',
+                  'Facial aesthetics, Botox, Invisalign®, and full-mouth rehabilitation',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-[#2d8a5e] mt-0.5 flex-shrink-0" />
+                    <span className="text-[#4a4a5c]">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/about/dr-bright"
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition hover:opacity-90"
+                style={{ backgroundColor: '#2d8a5e', color: '#ffffff' }}
+              >
+                Learn More About Dr. Bright
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+            {/* Image - 2 cols */}
+            <div className="lg:col-span-2 relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/drbright.jpg"
+                  alt="Dr. Bright"
+                  width={400}
+                  height={500}
+                  className="w-full h-[450px] object-cover object-top"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-40 h-40 rounded-2xl bg-[#e8734a]/10 -z-10" />
+            </div>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+        </div>
+      </section>
+
+      {/* TESTIMONIALS - Simple cards */}
+      <section className="py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+              Patient Stories
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e] leading-tight">
+              Trusted by Denver Families
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.name} className="rounded-3xl border border-[var(--shell)]/60 bg-white p-6 shadow-sm">
-                <div className="flex space-x-1 text-[var(--clay)]">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <Star key={index} className="h-4 w-4 fill-current" />
+              <figure 
+                key={testimonial.name}
+                className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
+              >
+                <div className="flex gap-1 text-[#e8734a] mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-current" />
                   ))}
                 </div>
-                <p className="mt-4 text-sm text-[var(--soft-text)]">{testimonial.quote}</p>
-                <p className="mt-6 text-sm font-semibold text-[var(--pine)]">— {testimonial.name}</p>
-              </div>
+                <blockquote className="text-[#4a4a5c] text-lg leading-relaxed mb-6">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </blockquote>
+                <figcaption className="font-semibold text-[#1a1a2e]">
+                  {testimonial.name}
+                </figcaption>
+              </figure>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/testimonials"
+              className="inline-flex items-center gap-2 text-[#2d8a5e] font-semibold hover:underline"
+            >
+              Read More Patient Stories
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* FAQ + CTA */}
-      <section className="bg-[var(--surface)] py-20">
-        <div className="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-2">
-          <div className="rounded-3xl border border-[var(--shell)] bg-white p-8 shadow-sm">
-            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">FAQs</p>
-            <h2 className="mt-3 text-3xl font-semibold text-[var(--pine)]">Answers to the questions we hear most.</h2>
-            <div className="mt-8 space-y-4">
-              {faqs.map((faq) => (
-                <details key={faq.question} className="rounded-2xl border border-[var(--shell)] bg-[var(--surface)] p-5" open>
-                  <summary className="cursor-pointer text-lg font-semibold text-[var(--pine)]">{faq.question}</summary>
-                  <p className="mt-2 text-sm text-[var(--soft-text)]">{faq.answer}</p>
-                </details>
-              ))}
+      {/* CONTACT / MAP SECTION */}
+      <section className="py-24 bg-[#fafafa]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Map */}
+            <div className="rounded-3xl overflow-hidden shadow-lg h-[450px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.0!2d-104.93!3d39.69!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDQxJzI0LjAiTiAxMDTCsDU1JzQ4LjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Cherry Creek South Dental Location"
+              />
+            </div>
+
+            {/* Contact Info + Form */}
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+                Get in Touch
+              </p>
+              <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">
+                Visit Us Today
+              </h2>
+
+              {/* Contact Cards */}
+              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+                  <MapPin className="h-6 w-6 text-[#2d8a5e] mb-3" />
+                  <h4 className="font-semibold text-[#1a1a2e] mb-1">Address</h4>
+                  <p className="text-[#4a4a5c] text-sm">5055 E Kentucky Ave<br />Denver, CO 80246</p>
+                </div>
+                <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+                  <Clock className="h-6 w-6 text-[#2d8a5e] mb-3" />
+                  <h4 className="font-semibold text-[#1a1a2e] mb-1">Hours</h4>
+                  <p className="text-[#4a4a5c] text-sm">Mon 8-5 • Tue-Wed 8-4<br />Thu 7-1 • Fri-Sun Closed</p>
+                </div>
+                <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+                  <Phone className="h-6 w-6 text-[#2d8a5e] mb-3" />
+                  <h4 className="font-semibold text-[#1a1a2e] mb-1">Call</h4>
+                  <a href="tel:(303) 377-7744" className="text-[#e8734a] font-medium hover:underline">(303) 377-7744</a>
+                </div>
+                <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+                  <MessageCircle className="h-6 w-6 text-[#2d8a5e] mb-3" />
+                  <h4 className="font-semibold text-[#1a1a2e] mb-1">Text</h4>
+                  <a href="sms:(720) 864-1333" className="text-[#e8734a] font-medium hover:underline">(720) 864-1333</a>
             </div>
           </div>
-          <div className="rounded-3xl border border-[var(--shell)] bg-white p-8 shadow-sm">
-            <p className="text-xs uppercase tracking-[0.4em] text-[var(--teal)]">Plan your visit</p>
-            <h3 className="mt-4 text-3xl font-semibold text-[var(--pine)]">Ready for a calmer dental experience?</h3>
-            <p className="mt-4 text-sm text-[var(--soft-text)]">
-              Call, text, or send a message through our online form. We’ll guide you through patient forms, insurance questions,
-              and scheduling the longer time you deserve.
-            </p>
-            <div className="mt-6 space-y-3 text-sm">
-              <a href="tel:(303) 377-7744" className="flex items-center gap-3 text-[var(--pine)] hover:text-[var(--clay)]">
-                <Phone className="h-4 w-4 text-[var(--clay)]" /> (303) 377-7744
-              </a>
-              <a href="sms:(720) 864-1333" className="flex items-center gap-3 text-[var(--pine)] hover:text-[var(--clay)]">
-                <MessageCircle className="h-4 w-4 text-[var(--clay)]" /> (720) 864-1333
-              </a>
-              <div className="flex items-center gap-3 text-[var(--soft-text)]">
-                <MapPin className="h-4 w-4 text-[var(--clay)]" /> 5055 E Kentucky Ave, Denver, CO 80246
+
+              {/* Simple CTA */}
+              <div className="bg-[#1a2e44] rounded-2xl p-8 text-center">
+                <h3 className="text-xl font-semibold mb-4" style={{ color: '#ffffff' }}>
+                  Ready to schedule?
+                </h3>
+                <p className="mb-6" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                  Call or text us to book your appointment today.
+                </p>
+                <a
+                  href="tel:(303) 377-7744"
+                  className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:opacity-90"
+                  style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+                >
+                  <Phone className="h-5 w-5" />
+                  Call (303) 377-7744
+                </a>
               </div>
             </div>
-            <Link
-              href="/contact"
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]"
-            >
-              Contact us
-            </Link>
           </div>
         </div>
       </section>

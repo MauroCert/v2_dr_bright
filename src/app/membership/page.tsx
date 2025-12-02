@@ -103,23 +103,17 @@ export default function Membership() {
       </section>
 
       <section className="py-16">
-        <div className="mx-auto max-w-4xl rounded-3xl border border-[var(--shell)] bg-white px-6 py-12 text-center text-[var(--pine)] shadow-sm">
+        <div className="mx-auto max-w-4xl rounded-3xl bg-[var(--pine)] px-6 py-12 text-center text-white">
           <Sparkles className="mx-auto h-8 w-8 text-[var(--clay)]" />
           <h2 className="mt-4 text-3xl font-semibold">Let’s personalize a plan for your family.</h2>
-          <p className="mt-3 text-[var(--soft-text)]">
+          <p className="mt-3 text-white/80">
             Call or text the front desk and we’ll help you enroll, answer questions about coverage, and customize benefits around your goals.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <a
-              href="tel:(303) 377-7744"
-              className="rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]"
-            >
+            <a href="tel:(303) 377-7744" className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--pine)]">
               Call (303) 377-7744
             </a>
-            <a
-              href="sms:(720) 864-1333"
-              className="rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)] hover:bg-[var(--pine)] hover:text-white"
-            >
+            <a href="sms:(720) 864-1333" className="rounded-full border border-white px-6 py-3 text-sm font-semibold text-white">
               Text (720) 864-1333
             </a>
           </div>

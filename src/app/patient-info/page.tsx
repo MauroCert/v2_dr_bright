@@ -168,20 +168,17 @@ export default function PatientInfo() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[var(--surface)] py-16">
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-3xl border border-[var(--shell)] bg-white px-4 py-12 text-center text-[var(--pine)] shadow-sm">
+      <section className="bg-[var(--pine)] py-16 text-white">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 text-center">
           <h2 className="text-3xl font-semibold">Have another question?</h2>
-          <p className="text-[var(--soft-text)]">
+          <p className="text-white/80">
             Text, call, or email us anytime. We’ll walk you through insurance, forms, and what to expect on your first visit.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a href="tel:(303) 377-7744" className="rounded-full bg-[var(--clay)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--teal)]">
+            <a href="tel:(303) 377-7744" className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--pine)]">
               Call (303) 377-7744
             </a>
-            <a
-              href="sms:(720) 864-1333"
-              className="rounded-full border border-[var(--pine)] px-6 py-3 text-sm font-semibold text-[var(--pine)] hover:bg-[var(--pine)] hover:text-white"
-            >
+            <a href="sms:(720) 864-1333" className="rounded-full border border-white px-6 py-3 text-sm font-semibold text-white">
               Text (720) 864-1333
             </a>
           </div>

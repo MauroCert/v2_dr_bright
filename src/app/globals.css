@@ -1,29 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --canvas: #f8f4ee;
-  --surface: #fffdf8;
-  --shell: #f0e7db;
-  --mist: #e2d4c5;
-  --ink: #1f2a37;
-  --pine: #1f4a4f;
-  --teal: #2d6c73;
-  --clay: #c58a5a;
-  --sage: #6c7976;
-  --soft-text: #4b5656;
+  /* New High-Contrast Color Palette */
+  
+  /* Light backgrounds */
+  --white: #ffffff;
+  --off-white: #fafafa;
+  --light-gray: #f5f5f5;
+  --soft-gray: #e8e8e8;
+  
+  /* Dark backgrounds - Deep navy for excellent contrast */
+  --navy: #1a2e44;
+  --navy-dark: #0f1c2e;
+  --navy-light: #2a4563;
+  
+  /* Primary green - matches logo */
+  --green: #2d8a5e;
+  --green-dark: #1f6b47;
+  --green-light: #3da870;
+  
+  /* Accent - warm coral for CTAs */
+  --coral: #e8734a;
+  --coral-dark: #d4623b;
+  --coral-light: #f08565;
+  
+  /* Text colors */
+  --text-dark: #1a1a2e;
+  --text-medium: #4a4a5c;
+  --text-light: #6b6b7b;
+  --text-on-dark: #ffffff;
+  --text-on-dark-muted: #c4d4e8;
+  
+  /* Utility */
+  --border: #d4d4d4;
+  --shadow: rgba(0, 0, 0, 0.08);
 }
 
 @theme inline {
-  --color-background: var(--canvas);
-  --color-foreground: var(--ink);
+  --color-background: var(--white);
+  --color-foreground: var(--text-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: radial-gradient(circle at top, #fffefb 0%, #f8f4ee 45%, #f1e7dc 100%);
-  color: var(--ink);
-  font-family: var(--font-geist-sans), 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+  font-family: var(--font-geist-sans), 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
   letter-spacing: 0.01em;
 }
 
@@ -31,12 +54,12 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-geist-sans), 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  color: var(--ink);
+  font-family: var(--font-geist-sans), 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-dark);
 }
 
 p {
-  color: var(--soft-text);
+  color: var(--text-medium);
 }
 
 a {
@@ -49,7 +72,173 @@ a:hover {
   opacity: 0.85;
 }
 
+/* V2 Geometric Decorations - Angled Corner Accents */
+.geo-corner-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.geo-corner-left::before {
+  content: '';
+  position: absolute;
+  top: -75px;
+  left: -75px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, var(--coral) 0%, transparent 60%);
+  opacity: 0.12;
+  border-radius: 0 0 100% 0;
+}
+
+.geo-corner-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.geo-corner-right::before {
+  content: '';
+  position: absolute;
+  bottom: -75px;
+  right: -75px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(315deg, var(--green) 0%, transparent 60%);
+  opacity: 0.15;
+  border-radius: 100% 0 0 0;
+}
+
+/* V2 Floating Bars - Vertical accent lines */
+.geo-bars-left {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.geo-bars-left::before,
+.geo-bars-left::after {
+  content: '';
+  width: 4px;
+  height: 80px;
+  border-radius: 4px;
+}
+
+.geo-bars-left::before {
+  background: var(--coral);
+  opacity: 0.25;
+}
+
+.geo-bars-left::after {
+  height: 60px;
+  background: var(--green);
+  opacity: 0.2;
+  margin-top: 20px;
+}
+
+.geo-bars-right {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.geo-bars-right::before,
+.geo-bars-right::after {
+  content: '';
+  width: 4px;
+  height: 80px;
+  border-radius: 4px;
+}
+
+.geo-bars-right::before {
+  background: var(--green);
+  opacity: 0.2;
+  margin-top: 30px;
+}
+
+.geo-bars-right::after {
+  height: 60px;
+  background: var(--coral);
+  opacity: 0.25;
+}
+
+/* V2 Diagonal Stripe */
+.geo-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.geo-stripe::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  width: 40px;
+  height: 200%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--coral) 30%,
+    var(--coral) 70%,
+    transparent 100%
+  );
+  opacity: 0.08;
+  transform: rotate(20deg);
+}
+
+.geo-stripe::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 40px;
+  height: 200%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--green) 30%,
+    var(--green) 70%,
+    transparent 100%
+  );
+  opacity: 0.1;
+  transform: rotate(-20deg);
+}
+
+/* Gradient backgrounds */
+.gradient-navy {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
+}
+
+.gradient-light {
+  background: linear-gradient(180deg, var(--white) 0%, var(--off-white) 100%);
+}
+
+.gradient-soft {
+  background: linear-gradient(180deg, var(--off-white) 0%, var(--light-gray) 100%);
+}
+
 ::selection {
-  background: var(--clay);
-  color: var(--surface);
+  background: var(--green);
+  color: var(--white);
 }
