@@ -28,7 +28,7 @@ const serviceCategories = [
     title: 'Cosmetic Dentistry',
     subtitle: 'Smile Design',
     description: 'Custom veneers, bonding, whitening, and facial aesthetics planned with digital previews and collaborative design.',
-    href: '/services#cosmetic',
+    href: '/services/cosmetic-dentistry',
     icon: Sparkles,
     color: '#e8734a',
     features: ['Porcelain veneers', 'Professional whitening', 'Smile makeovers'],
@@ -78,15 +78,6 @@ const serviceCategories = [
   },
 ];
 
-const additionalServices = [
-  'Botox® and facial aesthetics',
-  'Whitening memberships & touch-ups',
-  'Nightguards and TMJ support',
-  'CBCT airway evaluations',
-  'Membership plans for uninsured families',
-  'Dental sealants for kids',
-];
-
 const faqs = [
   {
     question: 'Do you accept dental insurance?',
@@ -123,34 +114,21 @@ export default function Services() {
         </div>
         
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-20">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#f08565' }}>
-              Our Services
-            </p>
+          <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6" style={{ color: '#ffffff' }}>
-              Comprehensive Dentistry<br />for Every Smile Goal
-          </h1>
+              Comprehensive dental services with concierge-level warmth.
+            </h1>
             <p className="text-xl mb-8" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              From preventive care to smile transformations, we offer personalized treatments in a calming environment with longer appointments.
+              Our Cherry Creek South Dental approach blends preventive focus, honest education, a joyful atmosphere, and concierge-level time.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="tel:(303) 377-7744"
-                className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:scale-105"
-                style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
-              >
-                <Phone className="h-5 w-5" />
-                Schedule a Visit
-              </a>
-            <Link
-              href="/contact"
-                className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:bg-white/20"
-                style={{ color: '#ffffff', border: '2px solid rgba(255,255,255,0.5)' }}
+            <a
+              href="tel:(303) 377-7744"
+              className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:scale-105"
+              style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
             >
-                Contact Us
-                <ArrowRight className="h-5 w-5" />
-            </Link>
-            </div>
+              <ArrowRight className="h-5 w-5" />
+              Schedule Your Appointment
+            </a>
           </div>
         </div>
       </section>
@@ -223,45 +201,6 @@ export default function Services() {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ADDITIONAL SERVICES */}
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-[#2d8a5e] mb-4">
-                Additional Treatments
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e] mb-6">
-                More Ways We Can Help
-              </h2>
-              <p className="text-[#4a4a5c] text-lg leading-relaxed mb-8">
-                Beyond our core services, we offer specialized treatments to support your complete oral health and wellness.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {additionalServices.map((service) => (
-                  <div key={service} className="flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-[#2d8a5e] flex-shrink-0" />
-                    <span className="text-[#4a4a5c]">{service}</span>
-            </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/drbright-patient.jpg"
-                  alt="Additional dental services"
-                  width={600}
-                  height={450}
-                  className="w-full h-[400px] object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-48 h-48 rounded-3xl bg-[#2d8a5e]/10 -z-10" />
-            </div>
           </div>
         </div>
       </section>
