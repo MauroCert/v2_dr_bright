@@ -293,8 +293,8 @@ export default function Home() {
             <div className="lg:col-span-2 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/drbright.jpg"
-                  alt="Dr. Bright"
+                  src="/images/Digital Assets/Dr. Bright and family.png"
+                  alt="Dr. Bright and family"
                   width={400}
                   height={500}
                   className="w-full h-[450px] object-cover object-top"
