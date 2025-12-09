@@ -247,7 +247,7 @@ export default function Home() {
       </section>
 
       {/* MEET DR. BRIGHT */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-[#fef9f3] to-[#fdf6ed]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
             {/* Content - 3 cols */}
