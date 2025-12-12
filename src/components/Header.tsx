@@ -84,7 +84,7 @@ export default function Header() {
           ))}
           <a
             href="tel:(303) 377-7744"
-            className="ml-2 rounded-full bg-[#e8734a] px-5 py-2.5 text-white font-semibold transition hover:bg-[#d66440]"
+            className="ml-2 rounded-full bg-[#8cc63e] px-5 py-2.5 text-white font-semibold transition hover:bg-[#6ba32e]"
           >
             Schedule Your Appointment
           </a>
@@ -115,7 +115,7 @@ export default function Header() {
             ))}
             <a
               href="tel:(303) 377-7744"
-              className="mt-2 rounded-full bg-[#e8734a] px-4 py-3 text-center font-semibold text-white hover:bg-[#d66440] transition-colors"
+              className="mt-2 rounded-full bg-[#8cc63e] px-4 py-3 text-center font-semibold text-white hover:bg-[#6ba32e] transition-colors"
             >
               Schedule Your Appointment
             </a>

@@ -147,7 +147,7 @@ export default function CosmeticDentistry() {
         
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-20">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#f08565' }}>
+            <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#8cc63e' }}>
               Cosmetic Dentistry in Denver, CO
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6" style={{ color: '#ffffff' }}>
@@ -159,7 +159,7 @@ export default function CosmeticDentistry() {
             <a
               href="tel:(303) 377-7744"
               className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:scale-105"
-              style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+              style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
             >
               <ArrowRight className="h-5 w-5" />
               Schedule Your Appointment
@@ -183,12 +183,12 @@ export default function CosmeticDentistry() {
                   className="w-full h-[500px] object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-3xl bg-[#e8734a]/20 -z-10" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-3xl bg-[#8cc63e]/20 -z-10" />
             </div>
 
             {/* Content */}
             <div>
-              <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#f08565' }}>
+              <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#8cc63e' }}>
                 Why Choose Us
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-8" style={{ color: '#ffffff' }}>
@@ -198,13 +198,13 @@ export default function CosmeticDentistry() {
               <ul className="space-y-4 mb-8">
                 {whyChooseUs.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <item.icon className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#f08565' }} />
+                    <item.icon className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#8cc63e' }} />
                     <span style={{ color: 'rgba(255,255,255,0.9)' }}>{item.text}</span>
                   </li>
                 ))}
               </ul>
 
-              <p className="text-lg italic border-l-4 pl-4" style={{ color: 'rgba(255,255,255,0.85)', borderColor: '#f08565' }}>
+              <p className="text-lg italic border-l-4 pl-4" style={{ color: 'rgba(255,255,255,0.85)', borderColor: '#8cc63e' }}>
                 Your smile is one of the first things people notice. We&apos;re here to make sure it&apos;s a smile that reflects confidence, health, and happiness.
               </p>
             </div>
@@ -216,7 +216,7 @@ export default function CosmeticDentistry() {
       <section className="py-24 bg-[#fafafa]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#8cc63e] mb-4">
               Our Cosmetic Services
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e]">
@@ -247,7 +247,7 @@ export default function CosmeticDentistry() {
                 {/* Content */}
                 <div className={`space-y-5 ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#e8734a' }}>
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#8cc63e' }}>
                       <Sparkles className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="text-2xl sm:text-3xl font-bold text-[#1a1a2e]">{service.title}</h3>
@@ -267,7 +267,7 @@ export default function CosmeticDentistry() {
                   </div>
                   
                   {service.note && (
-                    <p className="text-[#4a4a5c] italic border-l-4 border-[#e8734a] pl-4 mt-4">
+                    <p className="text-[#4a4a5c] italic border-l-4 border-[#8cc63e] pl-4 mt-4">
                       {service.note}
                     </p>
                   )}
@@ -292,7 +292,7 @@ export default function CosmeticDentistry() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e44]/85 via-transparent to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 space-y-2 text-white">
-                <p className="text-sm uppercase tracking-widest" style={{ color: '#f08565' }}>Your Smile Journey</p>
+                <p className="text-sm uppercase tracking-widest" style={{ color: '#8cc63e' }}>Your Smile Journey</p>
                 <p className="text-2xl font-bold">Where artistry meets precision</p>
               </div>
             </div>
@@ -310,7 +310,7 @@ export default function CosmeticDentistry() {
                     <div className="flex items-center gap-3">
                       <span 
                         className="flex h-10 w-10 items-center justify-center rounded-full text-white font-bold"
-                        style={{ backgroundColor: '#e8734a' }}
+                        style={{ backgroundColor: '#8cc63e' }}
                       >
                         {index + 1}
                       </span>
@@ -329,7 +329,7 @@ export default function CosmeticDentistry() {
       <section className="py-24 bg-[#fafafa]">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#8cc63e] mb-4">
               Common Questions
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e]">
@@ -342,7 +342,7 @@ export default function CosmeticDentistry() {
               <details key={faq.question} className="group bg-white rounded-2xl shadow-sm border border-gray-100">
                 <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-[#1a1a2e] text-lg">
                   {faq.question}
-                  <span className="ml-4 flex h-8 w-8 items-center justify-center rounded-full text-[#e8734a] transition group-open:rotate-45" style={{ backgroundColor: 'rgba(232,115,74,0.1)' }}>
+                  <span className="ml-4 flex h-8 w-8 items-center justify-center rounded-full text-[#8cc63e] transition group-open:rotate-45" style={{ backgroundColor: 'rgba(232,115,74,0.1)' }}>
                     +
                   </span>
                 </summary>
@@ -421,7 +421,7 @@ export default function CosmeticDentistry() {
       {/* CTA */}
       <section className="relative py-24 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a2e44 0%, #0a3d1f 50%, #052a16 100%)' }}>
         <div className="relative mx-auto max-w-4xl px-6 text-center">
-          <Sparkles className="h-12 w-12 mx-auto mb-6" style={{ color: '#f08565' }} />
+          <Sparkles className="h-12 w-12 mx-auto mb-6" style={{ color: '#8cc63e' }} />
           <h2 className="text-3xl sm:text-4xl font-bold mb-6" style={{ color: '#ffffff' }}>
             Ready to Transform Your Smile?
           </h2>
@@ -431,7 +431,7 @@ export default function CosmeticDentistry() {
           <a
             href="tel:(303) 377-7744"
             className="inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition hover:scale-105"
-            style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+            style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
           >
             Schedule Your Appointment
             <ArrowRight className="ml-2 h-5 w-5" />

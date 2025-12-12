@@ -30,7 +30,7 @@ const serviceCategories = [
     description: 'Custom veneers, bonding, whitening, and facial aesthetics planned with digital previews and collaborative design.',
     href: '/services/cosmetic-dentistry',
     icon: Sparkles,
-    color: '#e8734a',
+    color: '#8cc63e',
     features: ['Porcelain veneers', 'Professional whitening', 'Smile makeovers'],
     image: '/images/drbright-lobby.jpg',
   },
@@ -62,7 +62,7 @@ const serviceCategories = [
     description: 'Same-day relief for tooth pain, chipped teeth, or infections with calm bedside manner and dedicated time.',
     href: '/services#emergency',
     icon: Zap,
-    color: '#e8734a',
+    color: '#8cc63e',
     features: ['Same-day appointments', 'Pain relief', 'After-hours support'],
     image: '/images/drbright-patient.jpg',
   },
@@ -124,7 +124,7 @@ export default function Services() {
             <a
               href="tel:(303) 377-7744"
               className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:scale-105"
-              style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+              style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
             >
               <ArrowRight className="h-5 w-5" />
               Schedule Your Appointment
@@ -137,7 +137,7 @@ export default function Services() {
       <section className="py-24 bg-[#fafafa]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#8cc63e] mb-4">
               What We Offer
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e]">
@@ -194,7 +194,7 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex items-center text-[#e8734a] font-semibold text-sm">
+                  <div className="flex items-center text-[#8cc63e] font-semibold text-sm">
                     Learn more
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform" />
                   </div>
@@ -216,7 +216,7 @@ export default function Services() {
               { label: 'Patient-First Care', icon: Users },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-3" style={{ color: '#ffffff' }}>
-                <item.icon className="h-5 w-5" style={{ color: '#f08565' }} />
+                <item.icon className="h-5 w-5" style={{ color: '#8cc63e' }} />
                 <span className="font-medium">{item.label}</span>
               </div>
             ))}
@@ -228,7 +228,7 @@ export default function Services() {
       <section className="py-24 bg-[#fafafa]">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#8cc63e] mb-4">
               Frequently Asked Questions
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e]">
@@ -268,7 +268,7 @@ export default function Services() {
             <a
               href="tel:(303) 377-7744"
               className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:scale-105"
-              style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+              style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
             >
               <Phone className="h-5 w-5" />
               Call (303) 377-7744

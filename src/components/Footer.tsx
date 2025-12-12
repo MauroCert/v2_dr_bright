@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#0f1c2e] overflow-hidden" style={{ color: '#ffffff' }}>
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#e8734a]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#8cc63e]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2d8a5e]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
       
       <div className="relative mx-auto max-w-6xl px-4 pt-16 pb-12">
@@ -52,7 +52,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#e8734a] transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8cc63e] transition-colors"
                 aria-label="Facebook"
                 style={{ color: '#ffffff' }}
               >
@@ -62,7 +62,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#e8734a] transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8cc63e] transition-colors"
                 aria-label="Instagram"
                 style={{ color: '#ffffff' }}
               >
@@ -72,7 +72,7 @@ export default function Footer() {
                 href="https://maps.app.goo.gl/Ye2gTCTUwE17Wm8G8" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#e8734a] transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8cc63e] transition-colors"
                 aria-label="Google Maps"
                 style={{ color: '#ffffff' }}
               >
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-6" style={{ color: '#f08565' }}>Quick Links</h4>
+            <h4 className="font-semibold mb-6" style={{ color: '#8cc63e' }}>Quick Links</h4>
             <nav className="space-y-3">
               {quickLinks.map((link) => (
                 <Link 
@@ -100,7 +100,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold mb-6" style={{ color: '#f08565' }}>Contact</h4>
+            <h4 className="font-semibold mb-6" style={{ color: '#8cc63e' }}>Contact</h4>
             <div className="space-y-4 text-sm">
               <a 
                 href="tel:(303) 377-7744" 
@@ -108,7 +108,7 @@ export default function Footer() {
                 style={{ color: 'rgba(255,255,255,0.85)' }}
               >
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="h-4 w-4" style={{ color: '#f08565' }} />
+                  <Phone className="h-4 w-4" style={{ color: '#8cc63e' }} />
                 </div>
                 <span>Call: (303) 377-7744</span>
               </a>
@@ -118,13 +118,13 @@ export default function Footer() {
                 style={{ color: 'rgba(255,255,255,0.85)' }}
               >
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-                  <MessageCircle className="h-4 w-4" style={{ color: '#f08565' }} />
+                  <MessageCircle className="h-4 w-4" style={{ color: '#8cc63e' }} />
                 </div>
                 <span>Text: (720) 864-1333</span>
               </a>
               <div className="flex items-start gap-3" style={{ color: 'rgba(255,255,255,0.85)' }}>
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-4 w-4" style={{ color: '#f08565' }} />
+                  <MapPin className="h-4 w-4" style={{ color: '#8cc63e' }} />
                 </div>
                 <span>5055 E Kentucky Ave<br />Denver, CO 80246</span>
               </div>
@@ -133,7 +133,7 @@ export default function Footer() {
 
           {/* Hours */}
           <div>
-            <h4 className="font-semibold mb-6 flex items-center gap-2" style={{ color: '#f08565' }}>
+            <h4 className="font-semibold mb-6 flex items-center gap-2" style={{ color: '#8cc63e' }}>
               <Clock className="h-4 w-4" />
               Office Hours
             </h4>
@@ -152,7 +152,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-6 text-sm font-semibold transition-colors hover:opacity-80"
-              style={{ color: '#f08565' }}
+              style={{ color: '#8cc63e' }}
             >
               Get Directions
               <ArrowRight className="h-4 w-4" />
@@ -182,7 +182,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:opacity-80"
-              style={{ color: '#f08565' }}
+              style={{ color: '#8cc63e' }}
             >
               Dental Marketing from Day One
             </a>

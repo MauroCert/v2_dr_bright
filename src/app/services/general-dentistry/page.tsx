@@ -116,10 +116,10 @@ export default function GeneralDentistry() {
             <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: 'rgba(255,255,255,0.7)' }}>
               <Link href="/services" className="hover:text-white transition-colors">Services</Link>
               <span>/</span>
-              <span style={{ color: '#f08565' }}>General Dentistry</span>
+              <span style={{ color: '#8cc63e' }}>General Dentistry</span>
             </nav>
             
-            <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#f08565' }}>
+            <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#8cc63e' }}>
               Preventive Care
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6" style={{ color: '#ffffff' }}>
@@ -132,7 +132,7 @@ export default function GeneralDentistry() {
             <a
               href="tel:(303) 377-7744"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:scale-105"
-                style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+                style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
               >
                 <Phone className="h-5 w-5" />
                 Schedule a Cleaning
@@ -169,7 +169,7 @@ export default function GeneralDentistry() {
               >
                 <div className="flex items-start gap-6">
                   <div>
-                    <span className="text-4xl font-bold" style={{ color: '#e8734a' }}>
+                    <span className="text-4xl font-bold" style={{ color: '#8cc63e' }}>
                       {feature.number}
                     </span>
                   </div>
@@ -221,12 +221,12 @@ export default function GeneralDentistry() {
                 <p className="text-[#1a1a2e] font-semibold mb-1">Calming Atmosphere</p>
                 <p className="text-sm text-[#4a4a5c]">Natural light, plants, and music curated for relaxation.</p>
               </div>
-              <div className="absolute -top-6 -left-6 w-32 h-32 rounded-2xl bg-[#e8734a]/10 -z-10" />
+              <div className="absolute -top-6 -left-6 w-32 h-32 rounded-2xl bg-[#8cc63e]/10 -z-10" />
             </div>
 
             {/* Steps */}
             <div className="order-1 lg:order-2">
-              <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+              <p className="text-sm font-semibold uppercase tracking-widest text-[#8cc63e] mb-4">
                 What to Expect
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e] mb-8">
@@ -280,7 +280,7 @@ export default function GeneralDentistry() {
                             {service.name}
                           </span>
                         </div>
-                        <ArrowRight className="h-4 w-4 text-[#4a4a5c] group-hover:text-[#e8734a] group-hover:translate-x-1 transition-all" />
+                        <ArrowRight className="h-4 w-4 text-[#4a4a5c] group-hover:text-[#8cc63e] group-hover:translate-x-1 transition-all" />
                       </Link>
                 </li>
               ))}
@@ -288,7 +288,7 @@ export default function GeneralDentistry() {
           </div>
 
               <div className="mt-8 p-6 rounded-2xl" style={{ backgroundColor: '#1a2e44' }}>
-                <Shield className="h-8 w-8 mb-4" style={{ color: '#f08565' }} />
+                <Shield className="h-8 w-8 mb-4" style={{ color: '#8cc63e' }} />
                 <h3 className="text-lg font-semibold mb-2" style={{ color: '#ffffff' }}>
                   No Insurance? No Problem.
                 </h3>
@@ -298,7 +298,7 @@ export default function GeneralDentistry() {
                 <Link 
                   href="/membership"
                   className="inline-flex items-center text-sm font-semibold hover:underline"
-                  style={{ color: '#f08565' }}
+                  style={{ color: '#8cc63e' }}
                 >
                   View Membership Plans
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -308,7 +308,7 @@ export default function GeneralDentistry() {
 
             {/* FAQs */}
           <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+              <p className="text-sm font-semibold uppercase tracking-widest text-[#8cc63e] mb-4">
                 FAQs
               </p>
               <h2 className="text-2xl font-bold text-[#1a1a2e] mb-6">
@@ -338,7 +338,7 @@ export default function GeneralDentistry() {
       {/* CTA */}
       <section className="py-24 bg-[#1a2e44]">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-          <Sparkles className="h-12 w-12 mx-auto mb-6" style={{ color: '#f08565' }} />
+          <Sparkles className="h-12 w-12 mx-auto mb-6" style={{ color: '#8cc63e' }} />
           <h2 className="text-3xl sm:text-4xl font-bold mb-6" style={{ color: '#ffffff' }}>
             Ready for Preventive Care That Never Feels Rushed?
           </h2>
@@ -349,7 +349,7 @@ export default function GeneralDentistry() {
             <a
               href="tel:(303) 377-7744"
               className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold transition hover:scale-105"
-              style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+              style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
             >
               <Phone className="h-5 w-5" />
               Call (303) 377-7744

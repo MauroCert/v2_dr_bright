@@ -79,7 +79,7 @@ export default function Home() {
     {
       name: 'Sarah M.',
       initial: 'S',
-      color: '#e8734a',
+      color: '#8cc63e',
       date: '2 weeks ago',
       quote: 'Dr. Bright and his team made me feel completely comfortable. The longer appointment times really make a difference.',
     },
@@ -147,7 +147,7 @@ export default function Home() {
               <a
                 href="tel:(303) 377-7744"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold transition hover:scale-105"
-                style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+                style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
               >
                 <ArrowRight className="h-5 w-5" />
                 Schedule Your Appointment
@@ -169,7 +169,7 @@ export default function Home() {
       <section className="py-24 bg-[#fafafa]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#8cc63e] mb-4">
               Why Choose Us
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e] leading-tight mb-6">
@@ -186,7 +186,7 @@ export default function Home() {
                 key={column.title}
                 className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
               >
-                <div className="absolute -top-4 -left-4 w-16 h-16 rounded-2xl bg-[#e8734a]/10 rotate-12 group-hover:rotate-6 transition-transform duration-300" />
+                <div className="absolute -top-4 -left-4 w-16 h-16 rounded-2xl bg-[#8cc63e]/10 rotate-12 group-hover:rotate-6 transition-transform duration-300" />
                 <span className="text-5xl mb-6 block relative">{column.icon}</span>
                 <h3 className="text-xl font-semibold text-[#1a1a2e] mb-3">
                   {column.title}
@@ -215,12 +215,12 @@ export default function Home() {
                   className="w-full h-[500px] object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-3xl bg-[#e8734a]/20 -z-10" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-3xl bg-[#8cc63e]/20 -z-10" />
             </div>
 
             {/* Content */}
             <div>
-              <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#f08565' }}>
+              <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: '#8cc63e' }}>
                 About the Practice
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-8" style={{ color: '#ffffff' }}>
@@ -230,7 +230,7 @@ export default function Home() {
               <ul className="space-y-4 mb-8">
                 {whyChooseUs.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <item.icon className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#f08565' }} />
+                    <item.icon className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#8cc63e' }} />
                     <span style={{ color: 'rgba(255,255,255,0.9)' }}>{item.text}</span>
                   </li>
                 ))}
@@ -238,7 +238,7 @@ export default function Home() {
 
               <div className="p-6 rounded-2xl" style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}>
                 <p className="italic" style={{ color: 'rgba(255,255,255,0.9)' }}>
-                  <strong style={{ color: '#f08565' }}>Our mission:</strong> Cherry Creek South Dental offers personalized, family-oriented care with modern technology, focusing on conservative, collaborative treatments for all your dental needs.
+                  <strong style={{ color: '#8cc63e' }}>Our mission:</strong> Cherry Creek South Dental offers personalized, family-oriented care with modern technology, focusing on conservative, collaborative treatments for all your dental needs.
                 </p>
               </div>
             </div>
@@ -282,7 +282,7 @@ export default function Home() {
               <a
                 href="tel:(303) 377-7744"
                 className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition hover:opacity-90"
-                style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+                style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
               >
                 Schedule Your Appointment
                 <ArrowRight className="h-4 w-4" />
@@ -310,7 +310,7 @@ export default function Home() {
       <section className="py-24 bg-[#fafafa]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#8cc63e] mb-4">
               Our Services
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e] leading-tight">
@@ -327,7 +327,7 @@ export default function Home() {
                 <div className="flex items-start gap-4">
                   <span 
                     className="text-4xl font-bold flex-shrink-0"
-                    style={{ color: '#e8734a' }}
+                    style={{ color: '#8cc63e' }}
                   >
                     {service.number}.
                   </span>
@@ -449,7 +449,7 @@ export default function Home() {
       {/* READY TO TRANSFORM YOUR SMILE CTA */}
       <section className="relative py-24 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a2e44 0%, #0a3d1f 50%, #052a16 100%)' }}>
         <div className="relative mx-auto max-w-4xl px-6 text-center">
-          <Leaf className="h-12 w-12 mx-auto mb-6" style={{ color: '#f08565' }} />
+          <Leaf className="h-12 w-12 mx-auto mb-6" style={{ color: '#8cc63e' }} />
           <h2 className="text-3xl sm:text-4xl font-bold mb-6" style={{ color: '#ffffff' }}>
             Ready to Transform Your Smile?
           </h2>
@@ -459,7 +459,7 @@ export default function Home() {
           <a
             href="tel:(303) 377-7744"
             className="inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition hover:scale-105"
-            style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+            style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
           >
             Schedule Your Appointment
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -471,7 +471,7 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#e8734a] mb-4">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#8cc63e] mb-4">
               Our Location
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e] leading-tight mb-6">
@@ -500,7 +500,7 @@ export default function Home() {
             <a
               href="tel:(303) 377-7744"
               className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold transition hover:scale-105"
-              style={{ backgroundColor: '#e8734a', color: '#ffffff' }}
+              style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
             >
               <ArrowRight className="h-5 w-5" />
               Schedule Your Appointment
