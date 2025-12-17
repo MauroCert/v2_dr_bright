@@ -125,7 +125,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/hero.avif"
+            src="/Homepage/Dental Exams & Cleanings.jpg"
             alt="Cherry Creek South Dental Office"
             fill
             className="object-cover"
@@ -208,7 +208,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/drbright-lobby.jpg"
+                  src="/Homepage/Why Patients Choose Cherry Creek South Dental.jpg"
                   alt="Cherry Creek South Dental welcoming office"
                   width={600}
                   height={500}
@@ -293,8 +293,8 @@ export default function Home() {
             <div className="lg:col-span-2 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/Digital Assets/Dr. Bright and family.png"
-                  alt="Dr. Bright and family"
+                  src="/Homepage/Cosmetic Dentistry.jpg"
+                  alt="Cosmetic dentistry at Cherry Creek South Dental"
                   width={400}
                   height={500}
                   className="w-full h-[450px] object-cover object-top"

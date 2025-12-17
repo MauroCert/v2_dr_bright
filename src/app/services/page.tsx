@@ -22,7 +22,7 @@ const serviceCategories = [
     icon: Users,
     color: '#2d8a5e',
     features: ['Longer hygiene visits', 'Oral cancer screenings', 'Family-friendly care'],
-    image: '/images/drbright-patient.jpg',
+    image: '/Main service page/Copy of Dental Exams & Cleanings.jpg',
   },
   {
     title: 'Cosmetic Dentistry',
@@ -32,7 +32,7 @@ const serviceCategories = [
     icon: Sparkles,
     color: '#8cc63e',
     features: ['Porcelain veneers', 'Professional whitening', 'Smile makeovers'],
-    image: '/images/drbright-lobby.jpg',
+    image: '/Main service page/Copy of Cosmetic Dentistry.jpg',
   },
   {
     title: 'Invisalign® & Orthodontics',
@@ -42,8 +42,7 @@ const serviceCategories = [
     icon: Smile,
     color: '#1a2e44',
     features: ['Digital impressions', 'Remote monitoring', 'Retention planning'],
-    image: '/images/drbright-invisalign.png',
-    imageType: 'logo',
+    image: '/Main service page/Copy of Invisalign® Clear Aligners.jpg',
   },
   {
     title: 'Restorative Dentistry',
@@ -53,8 +52,7 @@ const serviceCategories = [
     icon: Shield,
     color: '#2d8a5e',
     features: ['Dental implants', 'Crowns & bridges', 'Full-mouth rehab'],
-    image: '/images/drbright-covid-badge.png',
-    imageType: 'logo',
+    image: '/Main service page/young-woman-is-dental-chair-drilling-her-tooth-by-specialist-modern-clinic.jpg',
   },
   {
     title: 'Emergency Dentistry',
@@ -64,7 +62,7 @@ const serviceCategories = [
     icon: Zap,
     color: '#8cc63e',
     features: ['Same-day appointments', 'Pain relief', 'After-hours support'],
-    image: '/images/drbright-patient.jpg',
+    image: '/Main service page/orthodontist-with-latex-glove-handling-dental-equipment.jpg',
   },
   {
     title: 'Sedation & Comfort',
@@ -74,7 +72,7 @@ const serviceCategories = [
     icon: Heart,
     color: '#1a2e44',
     features: ['Nitrous oxide', 'Weighted blankets', 'Extended appointments'],
-    image: '/images/drbright-lobby.jpg',
+    image: '/Main service page/Copy of Sedation Dentistry.jpg',
   },
 ];
 
@@ -104,7 +102,7 @@ export default function Services() {
       <section className="relative min-h-[50vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/drbright-lobby.jpg"
+            src="/Main service page/Hero.jpg"
             alt="Cherry Creek South Dental Services"
             fill
             className="object-cover"

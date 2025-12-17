@@ -101,7 +101,7 @@ export default function GeneralDentistry() {
       <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/drbright-patient.jpg"
+            src="/Individual service page/Hero.jpg"
             alt="General Dentistry at Cherry Creek South Dental"
             fill
             className="object-cover"
@@ -208,7 +208,7 @@ export default function GeneralDentistry() {
             <div className="relative order-2 lg:order-1">
               <div className="rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/drbright-lobby.jpg"
+                  src="/Individual service page/What your general dentistry visit feels like.jpg"
                   alt="Cherry Creek South Dental calming atrium"
                   width={600}
                   height={500}
