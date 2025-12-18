@@ -2,7 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Sparkles, Star, Heart, Shield, Clock, Smile } from 'lucide-react';
 
-const cosmeticServices = [
+type CosmeticService = {
+  title: string;
+  description: string;
+  listTitle: string;
+  points: string[];
+  image: string;
+  note?: string;
+  imageType?: 'logo';
+};
+
+const cosmeticServices: CosmeticService[] = [
   {
     title: 'Teeth Whitening',
     description: 'Brighten your smile safely and effectively with professional-grade whitening solutions. Our whitening treatments are designed to remove deep stains caused by coffee, tea, wine, aging, and everyday life—without causing sensitivity or damaging enamel.',
