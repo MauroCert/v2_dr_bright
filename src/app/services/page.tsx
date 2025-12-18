@@ -159,11 +159,7 @@ export default function Services() {
                     src={service.image}
                     alt={service.title}
                     fill
-                    className={
-                      service.imageType === 'logo'
-                        ? 'object-contain bg-gradient-to-br from-gray-50 to-white p-8'
-                        : 'object-cover group-hover:scale-105 transition-transform duration-500'
-                    }
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div 
                     className="absolute top-4 left-4 w-12 h-12 rounded-xl flex items-center justify-center"
