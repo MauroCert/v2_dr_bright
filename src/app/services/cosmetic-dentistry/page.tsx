@@ -8,7 +8,7 @@ const cosmeticServices = [
     description: 'Brighten your smile safely and effectively with professional-grade whitening solutions. Our whitening treatments are designed to remove deep stains caused by coffee, tea, wine, aging, and everyday life—without causing sensitivity or damaging enamel.',
     listTitle: 'Perfect for:',
     points: ['Special events', 'Photo-ready smiles', 'Reversing long-term discoloration', 'A fast, dramatic confidence boost'],
-    image: '/images/drbright-patient.jpg',
+    image: '/Main service page/european-mid-pleased-dentist-woman-face-mask-working-dental-clinic.jpg',
   },
   {
     title: 'Porcelain Veneers',
@@ -16,29 +16,28 @@ const cosmeticServices = [
     listTitle: 'Veneers can correct:',
     points: ['Chips', 'Gaps', 'Discoloration', 'Uneven or worn teeth', 'Minor misalignment', 'Irregular shapes'],
     note: 'Dr. Bright takes a meticulous approach to veneer design to ensure your results look beautifully natural—not artificial.',
-    image: '/images/drbright-lobby.jpg',
+    image: '/Individual service page/Hero.jpg',
   },
   {
     title: 'Invisalign® Clear Aligners',
     description: 'Straighten your teeth discreetly with Invisalign. Using digital scanning technology, we create a custom treatment plan that gradually moves your teeth into better alignment—without metal brackets or wires.',
     listTitle: 'Great for improving:',
     points: ['Crowding', 'Spacing', 'Bite alignment', 'Overlapping teeth', 'Aesthetic harmony'],
-    image: '/images/drbright-invisalign.png',
-    imageType: 'logo',
+    image: '/Main service page/Copy of Invisalign® Clear Aligners.jpg',
   },
   {
     title: 'Cosmetic Bonding',
     description: 'Cosmetic bonding uses tooth-colored composite material to repair chips, cracks, and small gaps. It\'s a fast, conservative, and cost-effective way to enhance your smile in a single appointment.',
     listTitle: 'Bonding is ideal for:',
     points: ['Minor aesthetic flaws', 'Fast fixes', 'Patients seeking a more affordable cosmetic option'],
-    image: '/images/drbright-patient.jpg',
+    image: '/Main service page/young-woman-is-dental-chair-drilling-her-tooth-by-specialist-modern-clinic.jpg',
   },
   {
     title: 'Smile Makeovers',
     description: 'For patients looking for a dramatic transformation, we combine custom treatments—such as whitening, veneers, and Invisalign—to design a complete smile makeover.',
     listTitle: 'Each smile makeover includes:',
     points: ['A comprehensive evaluation', 'Digital planning and imaging', 'Personalized treatment sequencing', 'Aesthetic design based on facial features, symmetry, and your goals'],
-    image: '/images/drbright-lobby.jpg',
+    image: '/Individual service page/What your general dentistry visit feels like.jpg',
   },
 ];
 
@@ -136,7 +135,7 @@ export default function CosmeticDentistry() {
       <section className="relative min-h-[50vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/drbright-patient.jpg"
+            src="/Homepage/Cosmetic Dentistry.jpg"
             alt="Cosmetic Dentistry at Cherry Creek South Dental"
             fill
             className="object-cover"
@@ -176,8 +175,8 @@ export default function CosmeticDentistry() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/drbright-patient.jpg"
-                  alt="Cosmetic dentistry consultation with Dr. Bright"
+                  src="/Main service page/Copy of Cosmetic Dentistry.jpg"
+                  alt="Cosmetic dentistry results at Cherry Creek South Dental"
                   width={600}
                   height={500}
                   className="w-full h-[500px] object-cover"
@@ -284,8 +283,8 @@ export default function CosmeticDentistry() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/drbright-lobby.jpg"
-                alt="Modern cosmetic dentistry at Cherry Creek South Dental"
+                src="/Main service page/orthodontist-with-latex-glove-handling-dental-equipment.jpg"
+                alt="Cosmetic treatment room at Cherry Creek South Dental"
                 width={600}
                 height={450}
                 className="w-full h-[450px] object-cover"

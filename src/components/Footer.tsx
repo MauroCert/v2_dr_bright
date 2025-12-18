@@ -30,66 +30,31 @@ export default function Footer() {
       
       <div className="relative mx-auto max-w-6xl px-4 pt-16 pb-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
-          {/* Brand & Contact */}
+        <div className="grid grid-cols-1 gap-12 lg:[grid-template-columns:1.5fr_0.8fr_0.8fr_0.8fr]">
+          {/* Map */}
           <div className="lg:col-span-1">
-            <Image
-              src="/logo.avif"
-              alt="Cherry Creek South Dental"
-              width={180}
-              height={50}
-              className="h-12 w-auto brightness-0 invert mb-6"
-            />
-            <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              Contact Cherry Creek South Dental
-            </p>
-            <div className="space-y-2 text-sm mb-6" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              <p>5055 E Kentucky Ave</p>
-              <p>Denver, CO 80246</p>
-            </div>
-            <div className="flex gap-3">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8cc63e] transition-colors"
-                aria-label="Facebook"
-                style={{ color: '#ffffff' }}
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8cc63e] transition-colors"
-                aria-label="Instagram"
-                style={{ color: '#ffffff' }}
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a 
-                href="https://maps.app.goo.gl/Ye2gTCTUwE17Wm8G8" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8cc63e] transition-colors"
-                aria-label="Google Maps"
-                style={{ color: '#ffffff' }}
-              >
-                <MapPin className="h-4 w-4" />
-              </a>
+            <div className="mb-6 overflow-hidden rounded-2xl border border-white/10 shadow-lg md:-mx-4 lg:-mx-6">
+              <iframe
+                title="Cherry Creek South Dental on Google Maps"
+                src="https://maps.google.com/maps?q=Cherry%20Creek%20South%20Dental%2C%205055%20E%20Kentucky%20Ave%2C%20Denver%2C%20CO%2080246&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-72 md:h-80 max-w-none"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold mb-6" style={{ color: '#8cc63e' }}>Quick Links</h4>
-            <nav className="space-y-3">
+          <div className="space-y-4">
+            <h4 className="font-semibold" style={{ color: '#8cc63e' }}>Quick Links</h4>
+            <nav className="space-y-2 text-sm">
               {quickLinks.map((link) => (
                 <Link 
                   key={link.name}
                   href={link.href} 
-                  className="block transition-colors text-sm hover:opacity-80"
+                  className="block transition-colors hover:opacity-80"
                   style={{ color: 'rgba(255,255,255,0.85)' }}
                 >
                   {link.name}
@@ -99,9 +64,9 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="font-semibold mb-6" style={{ color: '#8cc63e' }}>Contact</h4>
-            <div className="space-y-4 text-sm">
+          <div className="space-y-4">
+            <h4 className="font-semibold" style={{ color: '#8cc63e' }}>Contact</h4>
+            <div className="space-y-3 text-sm">
               <a 
                 href="tel:(303) 377-7744" 
                 className="flex items-center gap-3 transition-colors hover:opacity-80"
@@ -129,15 +94,37 @@ export default function Footer() {
                 <span>5055 E Kentucky Ave<br />Denver, CO 80246</span>
               </div>
             </div>
+            <div className="flex gap-3 pt-2">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8cc63e] transition-colors"
+                aria-label="Facebook"
+                style={{ color: '#ffffff' }}
+              >
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8cc63e] transition-colors"
+                aria-label="Instagram"
+                style={{ color: '#ffffff' }}
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+            </div>
           </div>
 
           {/* Hours */}
-          <div>
-            <h4 className="font-semibold mb-6 flex items-center gap-2" style={{ color: '#8cc63e' }}>
+          <div className="space-y-4">
+            <h4 className="font-semibold flex items-center gap-2" style={{ color: '#8cc63e' }}>
               <Clock className="h-4 w-4" />
               Office Hours
             </h4>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-1.5 text-sm">
               {hours.map((schedule) => (
                 <div key={schedule.day} className="flex justify-between" style={{ color: 'rgba(255,255,255,0.85)' }}>
                   <span>{schedule.day}</span>
@@ -163,9 +150,18 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs" style={{ color: 'rgba(255,255,255,0.6)' }}>
-              © {currentYear} Cherry Creek South Dental, PLLC. All rights reserved.
-            </p>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logo.avif"
+                alt="Cherry Creek South Dental"
+                width={160}
+                height={40}
+                className="h-8 w-auto brightness-0 invert"
+              />
+              <p className="text-xs" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                © {currentYear} Cherry Creek South Dental, PLLC. All rights reserved.
+              </p>
+            </div>
             <div className="flex items-center gap-6 text-xs" style={{ color: 'rgba(255,255,255,0.6)' }}>
               <Link href="/privacy-policy" className="transition-colors hover:opacity-80">
                 Privacy Policy

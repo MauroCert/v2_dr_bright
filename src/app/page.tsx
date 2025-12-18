@@ -467,47 +467,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FIND US / MAP SECTION */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#8cc63e] mb-4">
-              Our Location
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a2e] leading-tight mb-6">
-              Find Us in the Heart of Denver&apos;s Cherry Creek Area
-            </h2>
-            <p className="text-lg text-[#4a4a5c] max-w-3xl mx-auto">
-              We&apos;re conveniently located near Glendale, Colorado Boulevard, and Cherry Creek&apos;s residential neighborhoods—making us an easy choice for families, professionals, and Denver-area residents seeking high-quality, patient-first dental care.
-            </p>
-              </div>
-
-          {/* Map */}
-          <div className="rounded-3xl overflow-hidden shadow-lg h-[450px] max-w-4xl mx-auto mb-10">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1300.1893625952412!2d-104.92827420073058!3d39.7005873435678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7d089e7f05fb%3A0x53c315a85d1e3f98!2sCherry%20Creek%20South%20Dental!5e0!3m2!1sen!2sar!4v1764887572863!5m2!1sen!2sar"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Cherry Creek South Dental Location"
-            />
-            </div>
-
-          <div className="text-center">
-            <a
-              href="tel:(303) 377-7744"
-              className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold transition hover:scale-105"
-              style={{ backgroundColor: '#8cc63e', color: '#ffffff' }}
-            >
-              <ArrowRight className="h-5 w-5" />
-              Schedule Your Appointment
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
